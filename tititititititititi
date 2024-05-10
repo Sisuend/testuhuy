@@ -4876,7 +4876,40 @@ local S = Library:AddTab("Shop","14614409921")
 local D = Library:AddTab("Devil Fruit","14614447717")
 local Misc = Library:AddTab("Misc","11156061121")
 
-local Time = H:AddLabel("Executor Time");spawn(function() getgenv().Time = true;while wait() do wait(.1) UpdateTime() end end);function UpdateTime() local date = os.date("*t");local hour = (date.hour) % 24;local ampm = hour < 12 and "AM" or "PM";local timezone = string.format("%02i:%02i:%02i %s", ((hour -1) % 12) + 1, date.min, date.sec, ampm);local datetime = string.format("%02d/%02d/%04d", date.day, date.month, date.year);local LocalizationService = game:GetService("LocalizationService");local Players = game:GetService("Players");local player = Players.LocalPlayer;local name = player.Name;local result, code = pcall(function()   return LocalizationService:GetCountryRegionForPlayerAsync(player)  end);Time:Set(" : " .. timezone);Time:Set("Executor Time: " .. datetime .. " [ " .. code .. " ]");spawn(function() if getgenv().Time then pcall(function()  while wait() do  Time()  end end) end end) end
+local Time = H:AddLabel("Executor Time");
+
+spawn(function() 
+    getgenv().Time = true;
+    while wait() do 
+        wait(.1) 
+        UpdateTime() 
+    end 
+end);
+
+function UpdateTime() 
+    local date = os.date("*t");
+    local hour = (date.hour) % 24;
+    local ampm = hour < 12 and "AM" or "PM";
+    local timezone = string.format("%02i:%02i:%02i %s", ((hour -1) % 12) + 1, date.min, date.sec, ampm);
+    local datetime = string.format("%02d/%02d/%04d", date.day, date.month, date.year);
+    local LocalizationService = game:GetService("LocalizationService");
+    local Players = game:GetService("Players");
+    local player = Players.LocalPlayer;
+    local name = player.Name;
+    local result, code = pcall(function()   
+        return LocalizationService:GetCountryRegionForPlayerAsync(player)  
+    end);
+    Time:Set(" : " .. timezone);Time:Set("Executor Time: " .. datetime .. " [ " .. code .. " ]");
+    spawn(function() 
+        if getgenv().Time then 
+            pcall(function()  
+                while wait() do  
+                    Time()  
+                end 
+            end) 
+        end 
+    end) 
+end
 
 H:AddLabel("[🌐] Website : isnahamzah.tech ")
 H:AddLabel("[💬] Discord : discord.gg/isnahamzah ")
@@ -11766,7 +11799,7 @@ spawn(function()
                                                 repeat
                                                     pcall(function() wait() 
                                                         if (v.HumanoidRootPart.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).magnitude > 300 then
-                                                            Farmtween = HyperCahaya(v.HumanoidRootPart.Position,v.HumanoidRootPart.CFrame)
+                                                            Farmtween = HyperCahaya(v.HumanoidRootPart.Position,)
                                                         elseif (v.HumanoidRootPart.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).magnitude <= 300 then
                                                             if Farmtween then
                                                                 Farmtween:Stop()
@@ -16839,133 +16872,84 @@ end
     end)
  
     P:AddSeperator("Aimbot")
-    
-spawn(function()
-    while wait() do
-        pcall(function()
-            local MaxDistance = math.huge
-            for i,v in pairs(game:GetService("Players"):GetPlayers()) do
-                if v.Name ~= game:GetService("Players").LocalPlayer.Name then
-                    local Distance = v:DistanceFromCharacter(game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.Position)
-                    if Distance < MaxDistance then
-                        MaxDistance = Distance
-                        PlayerSelectAimbot = v.Name
-                    end
-                end
-            end
-        end)
-    end
-end)
 
-
-spawn(function()
-	while wait(.1) do
-		pcall(function()
-			local MaxDistance = math.huge
-			for i,v in pairs(game:GetService("Players"):GetPlayers()) do
-				if v.Name ~= game.Players.LocalPlayer.Name then
-					local Distance = v:DistanceFromCharacter(game.Players.LocalPlayer.Character.HumanoidRootPart.Position)
-					if Distance < MaxDistance then
-						MaxDistance = Distance
-						TargetPlayerAim = v.Name
-					end
-				end
-			end
-		end)
-	end
-end)
- 
-    
-    P:AddToggle("Aimbot Gun",false,function(value)
-        _G.Aimbot_Gun = value
+    P:AddSlider("Size Pov Circle",0,500,100,function(value)
+        _G.Select_Size_Fov = value
     end)
-    
-spawn(function()
-    while task.wait() do
-        if _G.Aimbot_Gun and game:GetService("Players").LocalPlayer.Character:FindFirstChild(SelectWeaponGun) then
-            pcall(function()
-                game:GetService("Players").LocalPlayer.Character[SelectWeaponGun].Cooldown.Value = 0
-                local args = {
-                    [1] = game:GetService("Players"):FindFirstChild(PlayerSelectAimbot).Character.HumanoidRootPart.Position,
-                    [2] = game:GetService("Players"):FindFirstChild(PlayerSelectAimbot).Character.HumanoidRootPart
-                }
-                game:GetService("Players").LocalPlayer.Character[SelectWeaponGun].RemoteFunctionShoot:InvokeServer(unpack(args))
-                local args = {
-                    [1] = game:GetService("Players"):FindFirstChild(PlayerSelectAimbot).Character.HumanoidRootPart.Position,
-                    [2] = game:GetService("Players"):FindFirstChild(PlayerSelectAimbot).Character.HumanoidRootPart
-                }
-                game:GetService("Players").LocalPlayer.Character[SelectWeaponGun].RemoteFunctionShoot:InvokeServer(unpack(args))
-                local args = {
-                    [1] = game:GetService("Players"):FindFirstChild(PlayerSelectAimbot).Character.HumanoidRootPart.Position,
-                    [2] = game:GetService("Players"):FindFirstChild(PlayerSelectAimbot).Character.HumanoidRootPart
-                }
-                game:GetService("Players").LocalPlayer.Character[SelectWeaponGun].RemoteFunctionShoot:InvokeServer(unpack(args))
-                local args = {
-                    [1] = game:GetService("Players"):FindFirstChild(PlayerSelectAimbot).Character.HumanoidRootPart.Position,
-                    [2] = game:GetService("Players"):FindFirstChild(PlayerSelectAimbot).Character.HumanoidRootPart
-                }
-                game:GetService("Players").LocalPlayer.Character[SelectWeaponGun].RemoteFunctionShoot:InvokeServer(unpack(args))
-                local args = {
-                    [1] = game:GetService("Players"):FindFirstChild(PlayerSelectAimbot).Character.HumanoidRootPart.Position,
-                    [2] = game:GetService("Players"):FindFirstChild(PlayerSelectAimbot).Character.HumanoidRootPart
-                }
-                game:GetService("Players").LocalPlayer.Character[SelectWeaponGun].RemoteFunctionShoot:InvokeServer(unpack(args))
-                local args = {
-                    [1] = game:GetService("Players"):FindFirstChild(PlayerSelectAimbot).Character.HumanoidRootPart.Position,
-                    [2] = game:GetService("Players"):FindFirstChild(PlayerSelectAimbot).Character.HumanoidRootPart
-                }
-                game:GetService("Players").LocalPlayer.Character[SelectWeaponGun].RemoteFunctionShoot:InvokeServer(unpack(args))
-                local args = {
-                    [1] = game:GetService("Players"):FindFirstChild(PlayerSelectAimbot).Character.HumanoidRootPart.Position,
-                    [2] = game:GetService("Players"):FindFirstChild(PlayerSelectAimbot).Character.HumanoidRootPart
-                }
-                game:GetService("Players").LocalPlayer.Character[SelectWeaponGun].RemoteFunctionShoot:InvokeServer(unpack(args))
-                local args = {
-                    [1] = game:GetService("Players"):FindFirstChild(PlayerSelectAimbot).Character.HumanoidRootPart.Position,
-                    [2] = game:GetService("Players"):FindFirstChild(PlayerSelectAimbot).Character.HumanoidRootPart
-                }
-                game:GetService("Players").LocalPlayer.Character[SelectWeaponGun].RemoteFunctionShoot:InvokeServer(unpack(args))
-                game:GetService'VirtualUser':CaptureController()
-                game:GetService'VirtualUser':Button1Down(Vector2.new(1280, 672))
-            end)
-        end
-    end
-end)
+
+    P:AddToggle("Show Pov Circle Aimbot",false,function(value)
+        _G.Show_Fov = value
+    end)
     
     P:AddToggle("Aimbot Skill",false,function(value)
         _G.Aimbot_Skill = value
     end)
     
-spawn(function()
-    pcall(function()
-        while task.wait() do
-            if _G.Aimbot_Skill and PlayerSelectAimbot ~= nil and game.Players.LocalPlayer.Character:FindFirstChildOfClass("Tool") and game.Players.LocalPlayer.Character[game.Players.LocalPlayer.Character:FindFirstChildOfClass("Tool").Name]:FindFirstChild("MousePos") then
-                local args = {
-                    [1] = game:GetService("Players"):FindFirstChild(PlayerSelectAimbot).Character.HumanoidRootPart.Position
-                }
-                
-                game:GetService("Players").LocalPlayer.Character:FindFirstChild(game.Players.LocalPlayer.Character:FindFirstChildOfClass("Tool").Name).RemoteEvent:FireServer(unpack(args))
+    local lp = game:GetService('Players').LocalPlayer
+    local mouse = lp:GetMouse()
+    spawn(function()
+        while wait() do
+            if _G.Aimbot_Skill then
+                pcall(function()
+                    local MaxDist, Closest = math.huge
+                    for i,v in pairs(game:GetService("Players"):GetChildren()) do 
+                        local Head = v.Character:FindFirstChild("HumanoidRootPart")
+                        local Pos, Vis = game.Workspace.CurrentCamera.WorldToScreenPoint(game.Workspace.CurrentCamera, Head.Position)
+                        local MousePos, TheirPos = Vector2.new(mouse.X, mouse.Y), Vector2.new(Pos.X, Pos.Y)
+                        local Dist = (TheirPos - MousePos).Magnitude
+                        if Dist < MaxDist and Dist <= _G.Select_Size_Fov and v.Name ~= game.Players.LocalPlayer.Name then
+                            MaxDist = Dist
+                            _G.Aim_Players = v
+                            AimbotTarget:Set("Target Status : ".. v.Name)
+                        end
+                    end
+                end)
             end
         end
     end)
-end)
-
-    P:AddToggle("Aimbot Nearest",false,function(value)
-        AimSkillNearest = value
+    spawn(function()
+        local gg = getrawmetatable(game)
+        local old = gg.__namecall
+        setreadonly(gg,false)
+        gg.__namecall = newcclosure(function(...)
+            local method = getnamecallmethod()
+            local args = {...}
+            if tostring(method) == "FireServer" then
+                if tostring(args[1]) == "RemoteEvent" then
+                    if tostring(args[2]) ~= "true" and tostring(args[2]) ~= "false" then
+                        if _G.Aimbot_Skill then
+                            args[2] = _G.Aim_Players.Character.HumanoidRootPart.Position
+                            return old(unpack(args))
+                        end
+                    end
+                end
+            end
+            return old(...)
+        end)
     end)
     
-spawn(function()
-	pcall(function()
-		game:GetService("RunService").RenderStepped:connect(function()
-			if AimSkillNearest and TargetPlayerAim ~= nil and game.Players.LocalPlayer.Character:FindFirstChildOfClass("Tool") and game.Players.LocalPlayer.Character[game.Players.LocalPlayer.Character:FindFirstChildOfClass("Tool").Name]:FindFirstChild("MousePos") then
-				local args = {
-					[1] = game:GetService("Players"):FindFirstChild(TargetPlayerAim).Character.HumanoidRootPart.Position
-				}
-				game:GetService("Players").LocalPlayer.Character[game.Players.LocalPlayer.Character:FindFirstChildOfClass("Tool").Name].RemoteEvent:FireServer(unpack(args))
-			end
-		end)
-	end)
-end)
+    
+    local Circle = Drawing.new("Circle")
+    Circle.Color =  Color3.fromRGB(0, 244, 0)
+    Circle.Thickness = 1
+    Circle.Radius = 250
+    Circle.NumSides = 460
+    Circle.Filled = false
+    Circle.Transparency = 0.3
+    
+    game:GetService("RunService").Stepped:Connect(function()
+        Circle.Radius = _G.Select_Size_Fov
+        Circle.Thickness = 1
+        Circle.NumSides = 460
+        Circle.Position = game:GetService('UserInputService'):GetMouseLocation()
+        if _G.Show_Fov then
+            Circle.Visible = true
+        else
+            Circle.Visible = false
+        end
+    end)
+
+    AimbotTarget = P:AddLabel("")
     
     P:AddSeperator("PvP")
     
