@@ -4749,7 +4749,7 @@ Circle.Thickness = 1
 Circle.Radius = 250
 Circle.NumSides = 460
 Circle.Filled = false
-Circle.Transparency = 1
+Circle.Transparency = 0.3
 
 game:GetService("RunService").Stepped:Connect(function()
     Circle.Radius = _G.Select_Size_Fov
