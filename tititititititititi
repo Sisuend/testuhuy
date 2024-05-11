@@ -22,8 +22,7 @@ local function checkPanel()
     end
 end
 
-local biji, response = checkPanel()
-local rankuser = "Pro Rank"
+local rankuser, response = checkPanel()
 local PakeUIBaru
 if rankuser == "Pro Rank" then
     PakeUIBaru = true
