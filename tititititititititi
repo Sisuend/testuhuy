@@ -1,28 +1,7 @@
-getgenv().ScriptKey="PrtLCkpEJdoFJbDTixNWZtGRkFkrKdKY";
-getgenv().DiscordID="979693557193523272";
 getgenv().AutoSelectTeam = true
 getgenv().SelectTeam = "Marines" -- Marines / Pirates
 
-local request = (syn and syn.request) or (http and http.request) or http_request
-local httpservice = game:GetService("HttpService")
-
-local function GET(url, headers)
-    return request({Url = url, Method = "GET", Headers = headers}).Body
-end
-
-local UsageApi = "https://code4zaa.xyz/api/usage/?"
-local LuarmorApi = "https://code4zaa.xyz/api/luarmor/v3/ganteng_hub?"
-
-local function checkPanel()
-    local CheckKey = httpservice:JSONDecode(GET(string.format("%suser_key=%s&discord_id=%s", LuarmorApi, ScriptKey or script_key or "", DiscordID)))
-    if CheckKey.pro_panel then 
-        return "Pro Rank", CheckKey.pro_panel
-    elseif CheckKey.basic_panel then
-        return "Basic Rank", CheckKey.basic_panel
-    end
-end
-
-local rankuser, response = checkPanel()
+local rankuser = "Pro Rank"
 local PakeUIBaru
 if rankuser == "Pro Rank" then
     PakeUIBaru = true
