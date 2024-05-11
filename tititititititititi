@@ -1,5 +1,3 @@
-getgenv().ScriptKey="PrtLCkpEJdoFJbDTixNWZtGRkFkrKdKY";
-getgenv().DiscordID="979693557193523272";
 getgenv().AutoSelectTeam = true
 getgenv().SelectTeam = "Marines" -- Marines / Pirates
 
