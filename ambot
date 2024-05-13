@@ -19,7 +19,7 @@ local pfp = "https://www.roblox.com/headshot-thumbnail/image?userId=".. game.Pla
 
 local Update
 local newLib
-local PakeUIBaru = false
+local PakeUIBaru = true
 
 if PakeUIBaru then -- pake ui baru ygy
     Update = loadstring(game:HttpGet("https://raw.githubusercontent.com/VanciSonic/Lgtihb/main/LgantihubBaru"))()
@@ -248,6 +248,8 @@ end
 
 local Camera = require(game.ReplicatedStorage.Util.CameraShaker)
 Camera:Stop()
+
+wait(3)
 
 local Library = Update:Window("Ganteng Hub","",Enum.KeyCode.RightControl);
 SAT = Library
