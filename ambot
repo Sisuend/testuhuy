@@ -486,5 +486,3 @@ StarterGui:SetCore("ChatMakeSystemMessage", Bjorka)
 
 bjorking.Text = "[🎥] Youtube : @isnahamzah"
 StarterGui:SetCore("ChatMakeSystemMessage", bjorking)
-
-end
