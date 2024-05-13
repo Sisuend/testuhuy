@@ -19,7 +19,7 @@ local pfp = "https://www.roblox.com/headshot-thumbnail/image?userId=".. game.Pla
 
 local Update
 local newLib
-local PakeUIBaru = true
+local PakeUIBaru = false
 
 if PakeUIBaru then -- pake ui baru ygy
     Update = loadstring(game:HttpGet("https://raw.githubusercontent.com/VanciSonic/Lgtihb/main/LgantihubBaru"))()
@@ -449,3 +449,42 @@ game:GetService("RunService").Stepped:Connect(function()
 end)
 
 AimbotTarget = P:AddLabel("Target Status : ")
+
+local Players = game:GetService("Players")
+local LP = Players.LocalPlayer
+local StarterGui = game:GetService('StarterGui')
+for i=1, 15 do
+    local r = pcall(StarterGui["SetCore"])
+    if r then break end
+    game:GetService('RunService').RenderStepped:wait()
+end
+wait()
+
+local properties = {
+    Color = Color3.new(255,255,0);
+    Font = Enum.Font.RobotoMono;
+    TextSize = 17;
+}
+
+local Bjorka = {
+    Color = Color3.new(0,255,0);
+    Font = Enum.Font.RobotoMono;
+    TextSize = 17;
+}
+
+local bjorking = {
+    Color = Color3.new(255,0,0);
+    Font = Enum.Font.RobotoMono;
+    TextSize = 17;
+}
+
+properties.Text = "[🌐] Website : isnahamzah.tech"
+StarterGui:SetCore("ChatMakeSystemMessage", properties)
+
+Bjorka.Text = "[💬] Discord : discord.gg/isnahamzah"
+StarterGui:SetCore("ChatMakeSystemMessage", Bjorka)
+
+bjorking.Text = "[🎥] Youtube : @isnahamzah"
+StarterGui:SetCore("ChatMakeSystemMessage", bjorking)
+
+end
