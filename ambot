@@ -1,0 +1,490 @@
+-- script PvP
+
+_G.antiscan = true
+getgenv().A = require(game:GetService("ReplicatedStorage").CombatFramework.RigLib).wrapAttackAnimationAsync
+getgenv().B = require(game.Players.LocalPlayer.PlayerScripts.CombatFramework.Particle).play
+_G.setfflag = true
+
+spawn(function()
+    while wait() do
+        if _G.setfflag then
+            setfflag("AbuseReportScreenshot", "False")
+            setfflag("AbuseReportScreenshotPercentage", "0")
+        end
+    end
+end)
+
+
+local pfp = "https://www.roblox.com/headshot-thumbnail/image?userId=".. game.Players.LocalPlayer.UserId .."&width=420&height=420&format=png"
+
+local Update
+local newLib
+local PakeUIBaru = true
+
+if PakeUIBaru then -- pake ui baru ygy
+    Update = loadstring(game:HttpGet("https://raw.githubusercontent.com/VanciSonic/Lgtihb/main/LgantihubBaru"))()
+elseif not PakeUIBaru then -- pake ui lama, pake wrapper gini dah gw
+    Update = {}
+    newLib = loadstring(game:HttpGet("https://raw.githubusercontent.com/VanciSonic/Lgtihb/main/Lgantihub"))()
+
+-- window
+function Update:Window(title, icon,...)
+	local LIBRARY = setmetatable({}, Update)
+	
+	local loading = newLib:Init(title, icon, true, "Username", { discord = "discord.gg/isnahamzah", youtube=  "@isnahamzah"})
+	
+	
+	-- loading bar
+	function LIBRARY:SetProgress(int)
+		loading:SetProgress(int)
+	end
+	function LIBRARY:Finish()
+		loading:Finish()
+	end
+	
+	-- gw lupa add ini njir
+	function LIBRARY:AddChangelog(list)
+		local self = setmetatable({}, LIBRARY)
+		return newLib:AddChangelog(list)
+	end
+	
+	
+	function LIBRARY:SetSAT(bool)
+            return newLib:SetSAT(bool)
+        end
+
+    function LIBRARY:SetFunctionSAT(func)
+        return newLib:SetFunctionSAT(func)
+    end
+	
+	-- addtab
+	function LIBRARY:AddTab(name, imgID)
+		local TAB = setmetatable({}, LIBRARY)
+		
+		if not string.find(imgID, "rbxassetid://", 1, true) then
+			imgID = "rbxassetid://"..imgID
+		end
+		
+		local newTab = newLib:AddTab(name, imgID)
+		
+		-- the insiders
+		function TAB:AddLabel(name)
+			local self = setmetatable({}, TAB)
+			return newTab:AddLabel(name)
+		end
+		function TAB:AddLabel1(name)
+			local self = setmetatable({}, TAB)
+			return newTab:AddLabel(name)
+		end
+		
+		function TAB:AddButton(name, callback)
+			local self = setmetatable({}, TAB)
+			return newTab:AddButton(name, "", callback)
+		end
+		
+		function TAB:AddSlider(name, min, max, start, callback, inc)
+			local self = setmetatable({}, TAB)
+			return newTab:AddSlider(name, "", {default = start, inc = (inc or 1), min = min, max = max}, callback)
+		end
+		
+		function TAB:AddTextbox(name, clearonfocuslost, callback)
+			local self = setmetatable({}, TAB)
+			return newTab:AddTextbox(name, "", {clearonfocus = clearonfocuslost, defaulttext = "", placeholdertext = ""}, callback)
+		end
+		
+		function TAB:AddSeperator(name)
+			local self = setmetatable({}, TAB)
+			return newTab:AddSeperator(name)
+        end
+
+		function TAB:AddLine()
+			local self = setmetatable({}, TAB)
+			return newTab:AddLine()
+		end
+		
+		-- TEMPORARY FOR NEW NOTIFICATION LIB
+		function TAB:AddNotification(textdesc)
+			game.StarterGui:SetCore("SendNotification", {
+				Title = "Notification", 
+				Text = textdesc;
+			})
+		end
+		
+		function TAB:AddDropdown(name, options, callback)
+			local self = setmetatable({}, TAB)
+			return newTab:AddDropdown(name, "", {default = "None", list = options}, callback)
+		end
+		
+		function TAB:AddToggle(name, default, callback)
+			local self = setmetatable({}, TAB)
+			return newTab: AddToggle(name, "", (default or false), callback)
+		end
+		
+		function TAB:AddKeybind(name, default, callback)
+			local self = setmetatable({}, TAB)
+			return newTab:AddKeybind(name, "", {triggerwhilebinding = false, defaultkey = default}, callback)
+		end
+		
+        function TAB:AddMultiDropdown(name, options, callback)
+			local self = setmetatable({}, TAB)
+			return newTab:AddMultiDropdown(name, "", {default = {}, list = options}, callback)
+		end
+		
+		return TAB
+	end
+	
+	return LIBRARY
+end
+end
+
+if game.PlaceId == 2753915549 then
+    World1 = true
+elseif game.PlaceId == 4442272183 then
+    World2 = true
+elseif game.PlaceId == 7449423635 then
+    World3 = true
+end
+
+function formatNumberWithCommas(number)
+    local formatted = tostring(number)
+    while true do
+        formatted, k = string.gsub(formatted, "^(-?%d+)(%d%d%d)", '%1,%2')
+        if (k == 0) then
+            break
+        end
+    end
+    return formatted
+end
+
+local function round(n)
+	return math.floor(tonumber(n) + 0.5)
+end
+
+Number = math.random(1, 1000000)
+function UpdatePlayerChams1()
+	for i,v in pairs(game:GetService("Players"):GetChildren()) do
+		pcall(function()
+			if not isnil(v.Character) then
+				if ESPPlayer then
+					if not isnil(v.Character.Head) and not v.Character.Head:FindFirstChild('NameEsp'..Number) then
+						local bill = Instance.new('BillboardGui',v.Character.Head)
+						bill.Name = 'NameEsp'..Number
+						bill.ExtentsOffset = Vector3.new(0, 1, 0)
+						bill.Size = UDim2.new(1,200,1,30)
+						bill.Adornee = v.Character.Head
+						bill.AlwaysOnTop = true
+						local name = Instance.new('TextLabel',bill)
+						name.Font = Enum.Font.GothamSemibold
+						name.FontSize = "Size14"
+						name.TextWrapped = true
+						name.Text = (v.Name ..' \n'.. round((game:GetService('Players').LocalPlayer.Character.Head.Position - v.Character.Head.Position).Magnitude/3) ..'Distance')
+						name.Size = UDim2.new(1,0,1,0)
+						name.TextYAlignment = 'Top'
+						name.BackgroundTransparency = 1
+						name.TextStrokeTransparency = 0.5
+						if v.Team == game.Players.LocalPlayer.Team then
+							name.TextColor3 = Color3.new(0,255,0)
+						else
+							name.TextColor3 = Color3.new(255,0,0)
+						end
+					else
+						v.Character.Head['NameEsp'..Number].TextLabel.Text = (v.Name ..' | Health : ' .. round(v.Character.Humanoid.Health*100/v.Character.Humanoid.MaxHealth) .. '%\nBounty : '.. formatNumberWithCommas(v.leaderstats["Bounty/Honor"].Value) .. '$')
+					end
+				else
+					if v.Character.Head:FindFirstChild('NameEsp'..Number) then
+						v.Character.Head:FindFirstChild('NameEsp'..Number):Destroy()
+					end
+				end
+			end
+		end)
+	end
+end
+
+function isnil(thing)
+	return (thing == nil)
+end
+local function round(n)
+	return math.floor(tonumber(n) + 0.5)
+end
+Number = math.random(1, 1000000)
+function UpdatePlayerChams2()
+	for i,v in pairs(game:GetService("Players"):GetChildren()) do
+		pcall(function()
+			if not isnil(v.Character) then
+				if ESPPlayer then
+					if not isnil(v.Character.Head) and not v.Character.Head:FindFirstChild('NameEsp'..Number) then
+						local bill = Instance.new('BillboardGui',v.Character.Head)
+						bill.Name = 'NameEsp'..Number
+						bill.ExtentsOffset = Vector3.new(0, 1, 0)
+						bill.Size = UDim2.new(1,200,1,30)
+						bill.Adornee = v.Character.Head
+						bill.AlwaysOnTop = true
+						local name = Instance.new('TextLabel',bill)
+						name.Font = Enum.Font.GothamSemibold
+						name.FontSize = "Size14"
+						name.TextWrapped = true
+						name.Text = (v.Name ..' \n'.. round((game:GetService('Players').LocalPlayer.Character.Head.Position - v.Character.Head.Position).Magnitude/3) ..' Distance')
+						name.Size = UDim2.new(1,0,1,0)
+						name.TextYAlignment = 'Top'
+						name.BackgroundTransparency = 1
+						name.TextStrokeTransparency = 0.5
+						if v.Team == game.Players.LocalPlayer.Team then
+							name.TextColor3 = Color3.new(0,255,0)
+						else
+							name.TextColor3 = Color3.new(255,0,0)
+						end
+					else
+						v.Character.Head['NameEsp'..Number].TextLabel.Text = (v.Name ..' | Health : ' .. round(v.Character.Humanoid.Health*100/v.Character.Humanoid.MaxHealth) .. '%\nBounty : '.. formatNumberWithCommas(v.leaderstats["Bounty/Honor"].Value) .. '$')
+					end
+				else
+					if v.Character.Head:FindFirstChild('NameEsp'..Number) then
+						v.Character.Head:FindFirstChild('NameEsp'..Number):Destroy()
+					end
+				end
+			end
+		end)
+	end
+end
+
+local Camera = require(game.ReplicatedStorage.Util.CameraShaker)
+Camera:Stop()
+
+local Library = Update:Window("Ganteng Hub","",Enum.KeyCode.RightControl);
+SAT = Library
+Library:AddChangelog({
+    ["1.0.0"] = "PvP Mode Ganteng Hub",
+})
+
+-- LOADING HERE
+Library:SetProgress(10) 
+Library:SetFunctionSAT(function()
+    HyperCahaya(game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame)
+    _G.Clip = false
+    task.wait(.1)
+    SAT:SetSAT(false)
+end)
+Library:Finish()
+
+
+local H = Library:AddTab("Info","14602166612")
+local P = Library:AddTab("Main","14614308263")
+
+local Time = H:AddLabel("Executor Time");
+
+spawn(function() 
+    getgenv().Time = true;
+    while wait() do 
+        wait(.1) 
+        UpdateTime() 
+    end 
+end);
+
+function UpdateTime() 
+    local date = os.date("*t");
+    local hour = (date.hour) % 24;
+    local ampm = hour < 12 and "AM" or "PM";
+    local timezone = string.format("%02i:%02i:%02i %s", ((hour -1) % 12) + 1, date.min, date.sec, ampm);
+    local datetime = string.format("%02d/%02d/%04d", date.day, date.month, date.year);
+    local LocalizationService = game:GetService("LocalizationService");
+    local Players = game:GetService("Players");
+    local player = Players.LocalPlayer;
+    local name = player.Name;
+    local result, code = pcall(function()   
+        return LocalizationService:GetCountryRegionForPlayerAsync(player)  
+    end);
+    Time:Set(" : " .. timezone);Time:Set("Executor Time: " .. datetime .. " [ " .. code .. " ]");
+    spawn(function() 
+        if getgenv().Time then 
+            pcall(function()  
+                while wait() do  
+                    Time()  
+                end 
+            end) 
+        end 
+    end) 
+end
+
+H:AddLabel("[🌐] Website : isnahamzah.tech ")
+H:AddLabel("[💬] Discord : discord.gg/isnahamzah ")
+H:AddLabel("[🎥] Youtube : @isnahamzah ") 
+H:AddLabel("[📀] Executor : ".. identifyexecutor())
+H:AddLabel("[💎] Rank : Tester ")
+H:AddLabel("#StayGanteng") 
+H:AddLabel("#GantengHubOnTop")
+
+
+
+P:AddSeperator("PVP")
+
+P:AddToggle("ESP Player",false,function(a)
+    ESPPlayer = a
+    UpdatePlayerChams1()
+    UpdatePlayerChams2()
+end)
+
+spawn(function()
+    while task.wait() do
+        if ESPPlayer then
+            UpdatePlayerChams1()
+            UpdatePlayerChams2()
+        end
+    end
+end)
+
+P:AddToggle("Anti Stun", true,function(value)
+    _G.TTIW = value
+end)
+
+spawn(function()
+    while task.wait() do
+        if _G.TTIW then
+            if game.Players.LocalPlayer.Character:FindFirstChild("Stun") then
+                game.Players.LocalPlayer.Character.Stun.Value = 0
+                game.Players.LocalPlayer.Character.Busy.Value = false 
+            end
+        end
+    end
+end)
+
+P:AddToggle("Infinite Soru",getgenv().InfSoru,function(value)
+    getgenv().InfSoru = value
+end)
+
+spawn(function()
+    while task.wait() do
+        pcall(function()
+            if getgenv().InfSoru and game:GetService("Players").LocalPlayer.Character:FindFirstChild("HumanoidRootPart") ~= nil  then
+                for i,v in next, getgc() do
+                    if game:GetService("Players").LocalPlayer.Character.Soru then
+                        if typeof(v) == "function" and getfenv(v).script == game:GetService("Players").LocalPlayer.Character.Soru then
+                            for i2,v2 in next, getupvalues(v) do
+                                if typeof(v2) == "table" then
+                                    repeat task.wait()
+                                        v2.LastUse = 0
+                                    until not getgenv().InfSoru or game:GetService("Players").LocalPlayer.Character.Humanoid.Health <= 0
+                                end
+                            end
+                        end
+                    end
+                end
+            end
+        end)
+    end
+end)
+
+P:AddSlider("Size Fov Circle",0,500,100,function(value)
+    _G.Select_Size_Fov = value
+end)
+
+P:AddToggle("Show Fov Circle Aimbot",false,function(value)
+    _G.Show_Fov = value
+end)
+
+P:AddToggle("Aimbot Skill",false,function(value)
+    _G.Aimbot_Skill = value
+end)
+
+local lp = game:GetService('Players').LocalPlayer
+local mouse = lp:GetMouse()
+spawn(function()
+    while wait() do
+        if _G.Aimbot_Skill then
+            pcall(function()
+                local MaxDist, Closest = 1500
+                for i,v in pairs(game:GetService("Players"):GetChildren()) do 
+                    local Head = v.Character:FindFirstChild("HumanoidRootPart")
+                    local Pos, Vis = game.Workspace.CurrentCamera.WorldToScreenPoint(game.Workspace.CurrentCamera, Head.Position)
+                    local MousePos, TheirPos = Vector2.new(mouse.X, mouse.Y), Vector2.new(Pos.X, Pos.Y)
+                    local Dist = (TheirPos - MousePos).Magnitude
+                    if Dist < MaxDist and Dist <= _G.Select_Size_Fov and v.Name ~= game.Players.LocalPlayer.Name then
+                        MaxDist = Dist
+                        _G.Aim_Players = v
+                        AimbotTarget:Set("Target Status : ".. v.Name)
+                    end
+                end
+            end)
+        end
+    end
+end)
+spawn(function()
+    local gg = getrawmetatable(game)
+    local old = gg.__namecall
+    setreadonly(gg,false)
+    gg.__namecall = newcclosure(function(...)
+        local method = getnamecallmethod()
+        local args = {...}
+        if tostring(method) == "FireServer" then
+            if tostring(args[1]) == "RemoteEvent" then
+                if tostring(args[2]) ~= "true" and tostring(args[2]) ~= "false" then
+                    if _G.Aimbot_Skill then
+                        args[2] = _G.Aim_Players.Character.HumanoidRootPart.Position
+                        return old(unpack(args))
+                    end
+                end
+            end
+        end
+        return old(...)
+    end)
+end)
+
+
+local Circle = Drawing.new("Circle")
+Circle.Color =  Color3.fromRGB(0, 0, 0)
+Circle.Thickness = 1
+Circle.Radius = 250
+Circle.NumSides = 460
+Circle.Filled = false
+Circle.Transparency = 0.1
+
+game:GetService("RunService").Stepped:Connect(function()
+    Circle.Radius = _G.Select_Size_Fov
+    Circle.Thickness = 1
+    Circle.NumSides = 460
+    Circle.Position = game:GetService('UserInputService'):GetMouseLocation()
+    if _G.Show_Fov then
+        Circle.Visible = true
+    else
+        Circle.Visible = false
+    end
+end)
+
+AimbotTarget = P:AddLabel("Target Status : ")
+
+local Players = game:GetService("Players")
+local LP = Players.LocalPlayer
+local StarterGui = game:GetService('StarterGui')
+for i=1, 15 do
+    local r = pcall(StarterGui["SetCore"])
+    if r then break end
+    game:GetService('RunService').RenderStepped:wait()
+end
+wait()
+
+local properties = {
+    Color = Color3.new(255,255,0);
+    Font = Enum.Font.RobotoMono;
+    TextSize = 17;
+}
+
+local Bjorka = {
+    Color = Color3.new(0,255,0);
+    Font = Enum.Font.RobotoMono;
+    TextSize = 17;
+}
+
+local bjorking = {
+    Color = Color3.new(255,0,0);
+    Font = Enum.Font.RobotoMono;
+    TextSize = 17;
+}
+
+properties.Text = "[🌐] Website : isnahamzah.tech"
+StarterGui:SetCore("ChatMakeSystemMessage", properties)
+
+Bjorka.Text = "[💬] Discord : discord.gg/isnahamzah"
+StarterGui:SetCore("ChatMakeSystemMessage", Bjorka)
+
+bjorking.Text = "[🎥] Youtube : @isnahamzah"
+StarterGui:SetCore("ChatMakeSystemMessage", bjorking)
+
+end
