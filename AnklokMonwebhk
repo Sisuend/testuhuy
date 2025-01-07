@@ -1,0 +1,1378 @@
+-- new webhook
+
+function wb(links, message)
+    local request = http_request or request or HttpPost or syn.request
+    for _, Url in pairs(links) do
+        request({
+            Url = Url,
+            Method = "POST",
+            Headers = {["Content-Type"] = "application/json"},
+            Body = game:GetService("HttpService"):JSONEncode(message)
+        })
+    end
+    return ""
+end
+
+local moonINF
+local ccOP
+task.spawn(function()
+    while task.wait() do
+        pcall(function()
+            if game:GetService("Lighting").Sky.MoonTextureId == "http://www.roblox.com/asset/?id=9709149431" then
+                moonINF = "Full Moon 100%"
+                ccOP = 15844367
+            elseif game:GetService("Lighting").Sky.MoonTextureId == "http://www.roblox.com/asset/?id=9709149052" then
+                moonINF = "Moon 75%"
+                ccOP = 10181046
+            elseif game:GetService("Lighting").Sky.MoonTextureId == "http://www.roblox.com/asset/?id=9709143733" then
+                moonINF = "Moon 50%"
+                ccOP = 10181046
+            elseif game:GetService("Lighting").Sky.MoonTextureId == "http://www.roblox.com/asset/?id=9709150401" then
+                moonINF = "Moon 25%"
+                ccOP = 10181046
+            elseif game:GetService("Lighting").Sky.MoonTextureId == "http://www.roblox.com/asset/?id=9709149680" then
+                moonINF = "Moon 15%"
+                ccOP = 10181046
+            else
+                moonINF = "Moon 0%"
+                ccOP = 10181046
+            end
+        end)
+    end
+end)
+
+local HakiPrice
+local Haki
+local HKU
+task.spawn(function()
+    while task.wait() do
+        pcall(function()
+            local TT = game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("ColorsDealer", "1")
+            if TT == "Winter Sky" then
+                Haki = "Winter Sky"
+                HKU = 15844367
+                HakiPrice = "``` ƒ 7,500 ```"
+            elseif TT == "Pure Red" then
+                Haki = "Pure Red"
+                HKU = 15844367
+                HakiPrice = "``` ƒ 7,500 ```"
+            elseif TT == "Snow White" then
+                Haki = "Snow White"
+                HKU = 15844367
+                HakiPrice = "``` ƒ 7,500 ```"
+            else
+                Haki = TT
+                HKU = 10181046
+                HakiPrice = "``` ƒ 1,500 ```"
+            end
+        end)
+    end
+end)
+
+local SwordX
+task.spawn(function()
+    while task.wait() do
+        pcall(function()
+            local TT = game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("LegendarySwordDealer","1")
+            if game.PlaceId == 4442272183 and TT == "Oroshi" then
+                SwordX = "Oroshi"
+            elseif game.PlaceId == 4442272183 and TT == "Saishi" then
+                SwordX = "Saishi"
+            elseif game.PlaceId == 4442272183 and TT == "Shizu" then
+                SwordX = "Shizu"
+            end
+        end)
+    end
+end)
+
+local validColors = {
+    "Orange Soda",
+    "Bright Yellow",
+    "Yellow Sunshine",
+    "Slimy Green",
+    "Green Lizard",
+    "Blue Jeans",
+    "Plump Purple",
+    "Fiery Rose",
+    "Heat Wave",
+    "Absolute Zero",
+    "Snow White",
+    "Pure Red",
+    "Winter Sky"
+}
+
+local LegendC = {
+    "Snow White",
+    "Pure Red",
+    "Winter Sky"
+}
+
+local SwordOcon = {
+    "Oroshi",
+    "Saishi",
+    "Shizu"
+}
+
+local bossNamesGroups = {
+    ["2753915549"] = {"The Saw", "Greybeard"},      -- First Sea
+    ["4442272183"] = {"Darkbeard", "Order", "Cursed Captain"},  -- Second Sea
+    ["7449423635"] = {"rip_indra True Form", "Soul Reaper", "Cake Prince", "Dough King", "Terror Shark", "Leviathan"}  -- Third Sea
+}
+
+local worldBossNames = bossNamesGroups[tostring(game.PlaceId)]
+
+local locatedSea
+if game.PlaceId == 2753915549 then
+    locatedSea = "``` First Sea ```"
+elseif game.PlaceId == 4442272183 then
+    locatedSea = "``` Second Sea ```"
+elseif game.PlaceId == 7449423635 then
+    locatedSea = "``` Third Sea ```"
+    World3 = true
+else
+    locatedSea = "Unknown Sea"
+end
+
+
+local playerCount = #game:GetService("Players"):GetPlayers()
+
+-- Link Mirrage
+local links1 = {
+    "https://discord.com/api/webhooks/1173953394810028084/_u_kD-XMrm8gMbouqlT7KJbqOjtzc9AKLx3nrurBI82WHbpomSf9acYlHwrXkbgxhnEv",
+    "https://discord.com/api/webhooks/1167810430270443590/hiLTHbosTPNkD8IoRQSJgC-ALXlqob7mDbYGQYNjXAgEe0WNxH7_WgR8-Vet-VR6q_iy",
+    "https://discord.com/api/webhooks/1173086723945795584/BLKHdjYpTcyYL4yZUGbhr9uXIw3UKT-YAM2g2oCsOVdq9-2QZQThu-MwnAPuE0hVYHGA",
+    "https://discord.com/api/webhooks/1159061220075245578/MOQU5FRr7XDBXzESIZzVZnnOjDi6Ju2HGUSxKhCuwKYwd55PbAmPIqqydLJ6qDeA-l43",
+    "https://discord.com/api/webhooks/1140670487463206912/RqcoA-IbKWfqcTKHssY-BaSpNFU_QIA_tAcvslGxzezo9WEmlr0o6g79oE4h6zAZYbRw",
+    "https://discord.com/api/webhooks/1139480661892276255/7JMEf-cJfvsHND_4pm47LKAnnm1Y4OGMll2ARNGUpczPZZlpTMKvtPZH76tR3nqEyMJZ", -- Sonic
+    "https://discord.com/api/webhooks/1139498274542334042/qvh_beJfsIXYVYZABxLjLomb-ImL9J9zR-M6afG2ZKeBNJU0cnaDfRyBFx4A821-BMMP", -- isnah
+    "https://discord.com/api/webhooks/1282722133016842311/UotuNmIMYIr2yqlIueaf8Gdixf7pOWZg6tBe9lg2Bcu38HYpf0qkhGNUlep9NgTCuR74",
+    "https://discord.com/api/webhooks/1297489920600047699/TJRvL6WyVRN1XjLQdngD0QOy975g2AfBTvY6lXQA8kZdCv2jE7sEz2nTtU9w8ihHnOAt",
+    "https://discord.com/api/webhooks/1299703780341977140/9V7brnp7X26eX0q5lmnHFbHHsQ2dpKW9HGz6-Kl9KzXUciw8WxO7LOQXSBAMbhdzpEaV",
+    "https://discord.com/api/webhooks/1317084431411843092/_DrBw5bFfmuC04HcV2BMNUelTidW8NBt9RNPRJ3_LoBA-lFTxzyABZnK2cVTkfeoFpOK",
+    "https://discordapp.com/api/webhooks/1241221370113949726/qxgo3-jTBLRaGm4irC7pGS1L_hS_2CgJDBqOJKQY0NDNOCe41iAnZqn-emCF01HZ1-Qj" -- Ganteng Hub
+}
+
+-- Link Moon
+local links2 = {
+    "https://discord.com/api/webhooks/1145367251109822545/IQ7Njds_7UXMYFRxxtLE5DVVsA0kO3IWWvwQ5UrQAmyJbQH0XjgYQvbN_72xxtz_sKM1", -- isnah
+    "https://discord.com/api/webhooks/1173086833052221511/6hn-SQpo3cUnvgmvimAyyx6EhEcGjB41z3ZSm7AqAC00g85xoGtIIK0oKHS8MB0zWnBw",
+    "https://discord.com/api/webhooks/1139480676278747147/O_ZNgOlEgR8b4gA1-AlLYnu8HUFFK9Z_qBsWaubDepVF5P_7l4kmgQ_E8O7UblLIB3Wv", -- Sonic
+    "https://discord.com/api/webhooks/1299703791880507434/C7fE-yalJyQ--AZWQ8mEo0znkJxMAe7-3w8usd_crWpqp4Nvybq0NiCfu6PWoJKCilis",
+    "https://discordapp.com/api/webhooks/1241225765010538496/xET3ccKrvmABXD_b7NtNJka_3SlozAO0oKCyAEyXp8tDY3oaEsI-625Ek5QFqbdTZtQD" -- Ganteng Hub
+}
+
+-- Link Boss
+local links3 = {
+    "https://discord.com/api/webhooks/1179059848571273297/dVdJuEcXfKJiyMbXeKDGiS2RC-LLdKlCq7YXdKwwM83CFkrhyqupVmNiwdtMSt1d0dgt", -- isnah
+    "https://discord.com/api/webhooks/1139481458185089094/30YbfrzONnbhpGgbzstQioEKt9Rlf9UHmKqlepH95DYSFo1hV3bVnmP6rdIlb78N8j22", -- Sonic
+    "https://discord.com/api/webhooks/1175376916690243684/j6Ik9uPg61j2gy5UfxlrFtcXimklZJTRf799sbV8unZxADgy5B-BDRiyoyZkNBrSKDXx",
+    "https://discord.com/api/webhooks/1145977032992366602/HCSlHVUb-mBVtfDgZZPVLugPejt7QjQCVQDcaBBP18gzYrmrlSuQGhwqogIxXPZuqhjk",
+    "https://discordapp.com/api/webhooks/1241219947074687046/jKXvzsfJZ32ttJljj2XDiw0wxt7fubA8CZyrVNhGx9m7nClfbTib-kaUz0TxG-FtzR_g" -- Ganteng Hub
+}
+
+-- Link haki Normal
+local links4 = {
+    "https://discord.com/api/webhooks/1173087036140441600/LGRQKFdLyAuwjZ7GDWEILdUSIOG8kZixgEbfq1fZ1ZI7RqIBh-5N5482orprEFK2f8XR",
+    "https://discord.com/api/webhooks/1233003086922907708/jLLWSSIXm8eoYl7TSzaZISqx1G9YwYInzm6O-naHe_qnF7UM1zAayMFRAv69QafvxiNw", -- isnah
+    "https://discord.com/api/webhooks/1139480690036068382/EiMtn6xxHpVyLiCJ_nqkjf199gIzXznwpInW_WWosGLILbvDJsKgTNtxOIDKQbS1J33k",  -- Sonic
+    "https://discordapp.com/api/webhooks/1321503259596292268/2sH56jYN3Rd1DDSh8Ark-7HNkf9GgEwVeXWWJd2uuQHXYaxGmev0LAjIRoX2U5ExXoxo" -- Ganteng Hub
+}
+
+-- Link haki Legend
+local links5 = {
+    "https://discord.com/api/webhooks/1173086933711327304/F9FXjdwN5Bsj6WAwp466HfakM_DdJDjNvZET8_bq55C99UVihG_BnH2kl4VbP4ZifpS0",
+    "https://discord.com/api/webhooks/1159059355077984377/2T_s6r7SGPZj3Zmsaax8NPCdZahH6FDbLfGAhksiB1IFx_QcyIZDA7sbVp4Rs4RCRyNz",
+    "https://discord.com/api/webhooks/1166034168736645120/5JCsQzIPgVEKFXWiBMN3JW5BkjndJl50SIY9omvwknV4sRYaxhE-O3U6O6ARt51VIHek", -- isnah
+    "https://discord.com/api/webhooks/1139480690036068382/EiMtn6xxHpVyLiCJ_nqkjf199gIzXznwpInW_WWosGLILbvDJsKgTNtxOIDKQbS1J33k", -- Sonic
+    "https://discordapp.com/api/webhooks/1321503259596292268/2sH56jYN3Rd1DDSh8Ark-7HNkf9GgEwVeXWWJd2uuQHXYaxGmev0LAjIRoX2U5ExXoxo" -- Ganteng Hub
+}
+
+-- Link Legendary Sword
+local links6 = {
+    "https://discord.com/api/webhooks/1173087162900680734/xp6Ux5yD7DzbOEXB3kyJIicMR0cUqXlh4M9ouROhzMHRqYGZOPvAVysvavrm4RCl6nF_",
+    "https://discord.com/api/webhooks/1192120315694829578/kr5Tlyu4DCLUKZH07Yeqw7qy8ecstJlbkyIdL5zklhzedq8C19QR3AFpmHxruEu0HKoB", -- isnah
+    "https://discord.com/api/webhooks/1139480701096427571/xV70-Juobcsxh9qK45bi_PoOIOn8bpe0guIM94E6_tjGy4AJteiRKvsK3hi30pNb1Ya-", -- Sonic
+    "https://discordapp.com/api/webhooks/1321503598928203786/C7njEqS3spBftUTdkWTDQX9hZdcfqx2QFAImPOmyV3vo3FstlgQUtSVBuIpQMVJELZ9n" -- Ganteng Hub
+}
+
+-- Link Fruit Finder
+local links7 = {
+    "https://discordapp.com/api/webhooks/1321501726569795604/PTOQ3gLhmK4p4V1HCpQh_zkuZ7y2KZwJkRjHAn-Alu7em2Jhmo9KFhYu5YCnsKScF1aS", -- Ganteng Hub
+    "https://discord.com/api/webhooks/1183008172672307221/BTroINGq1CanKdgGIuZLnExuq6q9JFU-VZMozPNUYGOG7ue9zj9bZPbJAo4e2G3EET8F" -- isnahamzah
+}
+
+-- Link Kitsune Island
+local links8 = {
+    "https://discordapp.com/api/webhooks/1321504122758762619/x_Te3PCxrbWdUJ92IMuT-i3zhTKsKnFAhWjHCPzf06BiVnowCrUJfxsmnnXHN7tmP4_b", -- Ganteng Hub
+    "https://discord.com/api/webhooks/1322386662600347799/v2N62BiVJB7bctb0BLbVJSzNn5jRhdpQTu2uL4jMdxYr109OJguSTpfiEZEQk9rqgyY7" -- Isnahamzah
+}
+
+-- Link Prehistoric Island
+local links9 = {
+    "https://discordapp.com/api/webhooks/1323244071107563542/BJPwfkl4kcGH4LLwwa7WPWQ6Z7EsnJH4GtRx2RDcZp02k01rQ3tRNnhrqieaHeGL4vg-", -- Ganteng Hub
+    "https://discord.com/api/webhooks/1324682234271105045/225vE8BgeV6wupfET8Up2Pokpuq6ctSND-3er54JxUYRDEBIPQ2eNrfXo69w7Mb3FlVZ" -- isnahamzah
+}
+
+-- Link Freezing Hydra Island
+local links10 = {
+    "https://discordapp.com/api/webhooks/1323880416574439516/7Md9gNHfuW_rXRqir2jUfFyYAs-TvIUJIlWsoBGObOfwqimU7luMbzglfjB7L59L1z6v", -- Ganteng Hub
+    "https://discord.com/api/webhooks/1324682322301157376/gUz3lEzeN0czA8wAlU4I9igIXrib-O-OmM3CKpRq4U4_hYElFNJQUyDBmfkAEeDjxWOG" -- Isnahamzah
+}
+
+function Mirrage()
+    if game:GetService("Workspace").Map:FindFirstChild("MysticIsland") then
+        local AdminMessage = {
+            ["embeds"] = {
+                {
+                    ["title"] = "MIRRAGE FINDER | BLOX FRUIT",
+                    ["description"] = "NEW WEBHOOK !!",
+                    ["thumbnail"] = {
+                        ["url"] = "https://i.imgur.com/odfwxb3.png",
+                    },
+                    ["type"] = "rich",
+                    ["color"] = 15844367,
+                    ["fields"] = {
+                        {
+                            ["name"] = "**[🏝️] Mirrage Status:**",
+                            ["value"] = "``` Spawn ✅ ```",
+                            ["inline"] = true
+                        },
+                        {
+                            ["name"] = "**[🌑] Full Moon Status:**",
+                            ["value"] = "``` ".. moonINF .." ```",
+                            ["inline"] = true
+                        },
+                        {
+                            ["name"] = "**[👥] Players In Server:**",
+                            ["value"] = "``` ".. playerCount .."/12 ```",
+                            ["inline"] = true
+                        },
+                        {
+                            ["name"] = "How To Use? Read Text Below!",
+                            ["value"] = "Copy Server Job Id And Paste it On Executor Then Click Execute Or Join instant Server"
+                        },
+                        {
+                            ["name"] = "**[🔗] Server Job Id:**",
+                            ["value"] = "```game.ReplicatedStorage['__ServerBrowser']:InvokeServer('teleport','"..game.JobId.."')```"
+                        },
+                        {
+                            ["name"] = "**[🔗] Join Server Instant:**",
+                            ["value"] = "[Click Here To Join Server](https://www.roblox.com/games/".. game.PlaceId .."?privateServerLinkCode=".. game.JobId ..")"
+                        }
+                    },
+                    ["timestamp"] = os.date("!%Y-%m-%dT%H:%M:%S")
+                }
+            }
+        }
+        return AdminMessage
+    end
+end
+
+function Moon()
+    if game.PlaceId == 7449423635 then
+        local AdminMessage = {
+            ["embeds"] = {
+                {
+                    ["title"] = "MOON FINDER | BLOX FRUIT",
+                    ["description"] = "NEW WEBHOOK !!",
+                    ["thumbnail"] = {
+                        ["url"] = "https://i.imgur.com/xeDy1OJ.png",
+                    },
+                    ["type"] = "rich",
+                    ["color"] = ccOP,
+                    ["fields"] = {
+                        {
+                            ["name"] = "**[🌕] Moon Phase:**",
+                            ["value"] = "``` ".. moonINF .." ```",
+                            ["inline"] = true
+                        },
+                        {
+                            ["name"] = "**[👥] Players In Server:**",
+                            ["value"] = "``` ".. playerCount .."/12 ```",
+                            ["inline"] = true
+                        },
+                        {
+                            ["name"] = "How To Use? Read Text Below!",
+                            ["value"] = "Copy Server Job Id And Paste it On Executor Then Click Execute Or Join instant Server"
+                        },
+                        {
+                            ["name"] = "**[🔗] Server Job Id:**",
+                            ["value"] = "```game.ReplicatedStorage['__ServerBrowser']:InvokeServer('teleport','"..game.JobId.."')```"
+                        },
+                        {
+                            ["name"] = "**[🔗] Join Server Instant:**",
+                            ["value"] = "[Click Here To Join Server](https://www.roblox.com/games/".. game.PlaceId .."?privateServerLinkCode=".. game.JobId ..")"
+                        }
+                    },
+                    ["timestamp"] = os.date("!%Y-%m-%dT%H:%M:%S")
+                }
+            }
+        }
+        return AdminMessage
+    end
+end
+
+function HakiS()
+    local TT = game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("ColorsDealer","1")
+    if table.find(validColors, TT) then
+        local AdminMessage = {
+            ["embeds"] = {
+                {
+                    ["title"] = "HAKI FINDER | BLOX FRUIT",
+                    ["description"] = "NEW WEBHOOK !!",
+                    ["thumbnail"] = {
+                        ["url"] = "https://i.imgur.com/VibJJDn.png",
+                    },
+                    ["type"] = "rich",
+                    ["color"] = HKU,
+                    ["fields"] = {
+                        {
+                            ["name"] = "**[❓] Haki Name:**",
+                            ["value"] = "```".. Haki .."```",
+                            ["inline"] = true
+                        },
+                        {
+                            ["name"] = "**[💵] Haki Price:**",
+                            ["value"] = HakiPrice,
+                            ["inline"] = true
+                        },
+                        {
+                            ["name"] = "**[📌] Located:**",
+                            ["value"] = locatedSea,
+                            ["inline"] = true
+                        },
+                        {
+                            ["name"] = "How To Use? Read Text Below!",
+                            ["value"] = "Copy Server Job Id And Paste it On Executor Then Click Execute Or Join instant Server"
+                        },
+                        {
+                            ["name"] = "**[🔗] Server Job Id:**",
+                            ["value"] = "```game.ReplicatedStorage['__ServerBrowser']:InvokeServer('teleport','"..game.JobId.."')```"
+                        },
+                        {
+                            ["name"] = "**[🔗] Join Server Instant:**",
+                            ["value"] = "[Click Here To Join Server](https://www.roblox.com/games/".. game.PlaceId .."?privateServerLinkCode=".. game.JobId ..")"
+                        }
+                    },
+                    ["timestamp"] = os.date("!%Y-%m-%dT%H:%M:%S")
+                }
+            }
+        }
+        return AdminMessage
+    end
+end
+
+function LHaki()
+    local TT = game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("ColorsDealer","1")
+    if table.find(LegendC, TT) then
+        local AdminMessage = {
+            ["embeds"] = {
+                {
+                    ["title"] = "HAKI FINDER | BLOX FRUIT",
+                    ["description"] = "NEW WEBHOOK !!",
+                    ["thumbnail"] = {
+                        ["url"] = "https://i.imgur.com/VibJJDn.png",
+                    },
+                    ["type"] = "rich",
+                    ["color"] = HKU,
+                    ["fields"] = {
+                        {
+                            ["name"] = "**[❓] Haki Name:**",
+                            ["value"] = "```".. Haki .."```",
+                            ["inline"] = true
+                        },
+                        {
+                            ["name"] = "**[💵] Haki Price:**",
+                            ["value"] = HakiPrice,
+                            ["inline"] = true
+                        },
+                        {
+                            ["name"] = "**[📌] Located:**",
+                            ["value"] = locatedSea,
+                            ["inline"] = true
+                        },
+                        {
+                            ["name"] = "How To Use? Read Text Below!",
+                            ["value"] = "Copy Server Job Id And Paste it On Executor Then Click Execute Or Join instant Server"
+                        },
+                        {
+                            ["name"] = "**[🔗] Server Job Id:**",
+                            ["value"] = "```game.ReplicatedStorage['__ServerBrowser']:InvokeServer('teleport','"..game.JobId.."')```"
+                        },
+                        {
+                            ["name"] = "**[🔗] Join Server Instant:**",
+                            ["value"] = "[Click Here To Join Server](https://www.roblox.com/games/".. game.PlaceId .."?privateServerLinkCode=".. game.JobId ..")"
+                        }
+                    },
+                    ["timestamp"] = os.date("!%Y-%m-%dT%H:%M:%S")
+                }
+            }
+        }
+        return AdminMessage
+    end
+end
+
+function Sword()
+    local AnJay = game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("LegendarySwordDealer","1")
+    if table.find(SwordOcon, AnJay) and game.PlaceId == 4442272183 then
+        local AdminMessage = {
+            ["embeds"] = {
+                {
+                    ["title"] = "LEGEND SWORD FINDER | BLOX FRUIT",
+                    ["description"] = "NEW WEBHOOK !!",
+                    ["thumbnail"] = {
+                        ["url"] = "https://i.imgur.com/sM64Vat.png",
+                    },
+                    ["type"] = "rich",
+                    ["color"] = 15844367,
+                    ["fields"] = {
+                        {
+                            ["name"] = "**[⚔️] Sword Name:**",
+                            ["value"] = "``` ".. SwordX .." ```",
+                            ["inline"] = true
+                        },
+                        {
+                            ["name"] = "**[👥] Players In Server:**",
+                            ["value"] = "``` ".. playerCount .."/12 ```",
+                            ["inline"] = true
+                        },
+                        {
+                            ["name"] = "**[📌] Located:**",
+                            ["value"] = "``` Seacond Sea ```",
+                            ["inline"] = true
+                        },
+                        {
+                            ["name"] = "How To Use? Read Text Below!",
+                            ["value"] = "Copy Server Job Id And Paste it On Executor Then Click Execute Or Join instant Server"
+                        },
+                        {
+                            ["name"] = "**[🔗] Server Job Id:**",
+                            ["value"] = "```game.ReplicatedStorage['__ServerBrowser']:InvokeServer('teleport','"..game.JobId.."')```"
+                        },
+                        {
+                            ["name"] = "**[🔗] Join Server Instant:**",
+                            ["value"] = "[Click Here To Join Server](https://www.roblox.com/games/".. game.PlaceId .."?privateServerLinkCode=".. game.JobId ..")"
+                        }
+                    },
+                    ["timestamp"] = os.date("!%Y-%m-%dT%H:%M:%S")
+                }
+            }
+        }
+        return AdminMessage
+    end
+end
+
+function Boss()
+    for i, v in pairs(game:GetService("ReplicatedStorage"):GetChildren()) do
+        if table.find(worldBossNames, v.Name) then
+            local AdminMessage = {
+                ["embeds"] = {
+                    {
+                        ["title"] = "BOSS FINDER | BLOX FRUIT",
+                        ["description"] = "NEW WEBHOOK !!",
+                        ["thumbnail"] = {
+                            ["url"] = "https://i.imgur.com/6RD5kZ0.png",
+                        },
+                        ["type"] = "rich",
+                        ["color"] = 15844367,
+                        ["fields"] = {
+                            {
+                                ["name"] = "**[👹] Boss Name:**",
+                                ["value"] = "``` ".. v.Name .." ```",
+                                ["inline"] = true
+                            },
+                            {
+                                ["name"] = "**[📌] Located:**",
+                                ["value"] = locatedSea,
+                                ["inline"] = true
+                            },
+                            {
+                                ["name"] = "**[👥] Players In Server:**",
+                                ["value"] = "``` ".. playerCount .."/12 ```",
+                                ["inline"] = true
+                            },
+                            {
+                                ["name"] = "How To Use? Read Text Below!",
+                                ["value"] = "Copy Server Job Id And Paste it On Executor Then Click Execute Or Join instant Server"
+                            },
+                            {
+                                ["name"] = "**[🔗] Server Job Id:**",
+                                ["value"] = "```game.ReplicatedStorage['__ServerBrowser']:InvokeServer('teleport','"..game.JobId.."')```"
+                            },
+                            {
+                                ["name"] = "**[🔗] Join Server Instant:**",
+                                ["value"] = "[Click Here To Join Server](https://www.roblox.com/games/".. game.PlaceId .."?privateServerLinkCode=".. game.JobId ..")"
+                            }
+                        },
+                        ["timestamp"] = os.date("!%Y-%m-%dT%H:%M:%S")
+                    }
+                }
+            }
+            return AdminMessage
+        end
+    end
+end
+
+function FruitFinder()
+    for _, v in next, workspace:GetChildren() do
+        if v.Name:find("Fruit") and (v:IsA("Model") or v:IsA("Tool")) then
+            local AdminMessage = {
+                ["embeds"] = {
+                    {
+                        ["title"] = "FRUIT FINDER | BLOX FRUIT",
+                        ["description"] = "NEW WEBHOOK !!",
+                        ["thumbnail"] = {
+                            ["url"] = "https://i.imgur.com/lX6qhTx.png",
+                        },
+                        ["type"] = "rich",
+                        ["color"] = 15844367,
+                        ["fields"] = {
+                            {
+                                ["name"] = "**[🍎] Fruit Name:**",
+                                ["value"] = "``` ".. v.Name .." ```",
+                                ["inline"] = true
+                            },
+                            {
+                                ["name"] = "**[📌] Located:**",
+                                ["value"] = locatedSea,
+                                ["inline"] = true
+                            },
+                            {
+                                ["name"] = "**[👥] Players In Server:**",
+                                ["value"] = "``` ".. playerCount .."/12 ```",
+                                ["inline"] = true
+                            },
+                            {
+                                ["name"] = "How To Use? Read Text Below!",
+                                ["value"] = "Copy Server Job Id And Paste it On Executor Then Click Execute Or Join instant Server"
+                            },
+                            {
+                                ["name"] = "**[🔗] Server Job Id:**",
+                                ["value"] = "```game.ReplicatedStorage['__ServerBrowser']:InvokeServer('teleport','"..game.JobId.."')```"
+                            },
+                            {
+                                ["name"] = "**[🔗] Join Server Instant:**",
+                                ["value"] = "[Click Here To Join Server](https://www.roblox.com/games/".. game.PlaceId .."?privateServerLinkCode=".. game.JobId ..")"
+                            }
+                        },
+                        ["timestamp"] = os.date("!%Y-%m-%dT%H:%M:%S")
+                    }
+                }
+            }
+            return AdminMessage
+        end
+    end
+end
+
+function KitsuneIsland()
+    if game:GetService("Workspace")["_WorldOrigin"].Locations:FindFirstChild("Kitsune Island") then
+        local AdminMessage = {
+            ["embeds"] = {
+                {
+                    ["title"] = "KITSUNE FINDER | BLOX FRUIT",
+                    ["description"] = "NEW WEBHOOK !!",
+                    ["thumbnail"] = {
+                        ["url"] = "https://i.imgur.com/acSTumQ.png",
+                    },
+                    ["type"] = "rich",
+                    ["color"] = 15844367,
+                    ["fields"] = {
+                        {
+                            ["name"] = "**[🏝️] Kitsune Status:**",
+                            ["value"] = "``` Spawn ✅ ```",
+                            ["inline"] = true
+                        },
+                        {
+                            ["name"] = "**[🌑] Full Moon Status:**",
+                            ["value"] = "``` ".. moonINF .." ```",
+                            ["inline"] = true
+                        },
+                        {
+                            ["name"] = "**[👥] Players In Server:**",
+                            ["value"] = "``` ".. playerCount .."/12 ```",
+                            ["inline"] = true
+                        },
+                        {
+                            ["name"] = "How To Use? Read Text Below!",
+                            ["value"] = "Copy Server Job Id And Paste it On Executor Then Click Execute Or Join instant Server"
+                        },
+                        {
+                            ["name"] = "**[🔗] Server Job Id:**",
+                            ["value"] = "```game.ReplicatedStorage['__ServerBrowser']:InvokeServer('teleport','"..game.JobId.."')```"
+                        },
+                        {
+                            ["name"] = "**[🔗] Join Server Instant:**",
+                            ["value"] = "[Click Here To Join Server](https://www.roblox.com/games/".. game.PlaceId .."?privateServerLinkCode=".. game.JobId ..")"
+                        }
+                    },
+                    ["timestamp"] = os.date("!%Y-%m-%dT%H:%M:%S")
+                }
+            }
+        }
+        return AdminMessage
+    end
+end
+
+function PrehistoricIsland()
+    if game:GetService("Workspace")["_WorldOrigin"].Locations:FindFirstChild("Prehistoric Island") then
+        local AdminMessage = {
+            ["embeds"] = {
+                {
+                    ["title"] = "VOLCANO FINDER | BLOX FRUIT",
+                    ["description"] = "NEW WEBHOOK !!",
+                    ["thumbnail"] = {
+                        ["url"] = "https://i.imgur.com/jAZVTBz.png",
+                    },
+                    ["type"] = "rich",
+                    ["color"] = 15844367,
+                    ["fields"] = {
+                        {
+                            ["name"] = "**[🏝️] Prehistoric Status:**",
+                            ["value"] = "``` Spawn ✅ ```",
+                            ["inline"] = true
+                        },
+                        {
+                            ["name"] = "**[🌑] Full Moon Status:**",
+                            ["value"] = "``` ".. moonINF .." ```",
+                            ["inline"] = true
+                        },
+                        {
+                            ["name"] = "**[👥] Players In Server:**",
+                            ["value"] = "``` ".. playerCount .."/12 ```",
+                            ["inline"] = true
+                        },
+                        {
+                            ["name"] = "How To Use? Read Text Below!",
+                            ["value"] = "Copy Server Job Id And Paste it On Executor Then Click Execute Or Join instant Server"
+                        },
+                        {
+                            ["name"] = "**[🔗] Server Job Id:**",
+                            ["value"] = "```game.ReplicatedStorage['__ServerBrowser']:InvokeServer('teleport','"..game.JobId.."')```"
+                        },
+                        {
+                            ["name"] = "**[🔗] Join Server Instant:**",
+                            ["value"] = "[Click Here To Join Server](https://www.roblox.com/games/".. game.PlaceId .."?privateServerLinkCode=".. game.JobId ..")"
+                        }
+                    },
+                    ["timestamp"] = os.date("!%Y-%m-%dT%H:%M:%S")
+                }
+            }
+        }
+        return AdminMessage
+    end
+end
+
+function FreezingHydraIsland()
+    if game:GetService("Workspace")["_WorldOrigin"].Locations:FindFirstChild("Freezing Hydra Island") then
+        local AdminMessage = {
+            ["embeds"] = {
+                {
+                    ["title"] = "FREEZING HYDRA FINDER | BLOX FRUIT",
+                    ["description"] = "NEW WEBHOOK !!",
+                    ["thumbnail"] = {
+                        ["url"] = "https://i.imgur.com/jAZVTBz.png",
+                    },
+                    ["type"] = "rich",
+                    ["color"] = 15844367,
+                    ["fields"] = {
+                        {
+                            ["name"] = "**[🏝️] Freezing Hydra Status:**",
+                            ["value"] = "``` Spawn ✅ ```",
+                            ["inline"] = true
+                        },
+                        {
+                            ["name"] = "**[🌑] Full Moon Status:**",
+                            ["value"] = "``` ".. moonINF .." ```",
+                            ["inline"] = true
+                        },
+                        {
+                            ["name"] = "**[👥] Players In Server:**",
+                            ["value"] = "``` ".. playerCount .."/12 ```",
+                            ["inline"] = true
+                        },
+                        {
+                            ["name"] = "How To Use? Read Text Below!",
+                            ["value"] = "Copy Server Job Id And Paste it On Executor Then Click Execute Or Join instant Server"
+                        },
+                        {
+                            ["name"] = "**[🔗] Server Job Id:**",
+                            ["value"] = "```game.ReplicatedStorage['__ServerBrowser']:InvokeServer('teleport','"..game.JobId.."')```"
+                        },
+                        {
+                            ["name"] = "**[🔗] Join Server Instant:**",
+                            ["value"] = "[Click Here To Join Server](https://www.roblox.com/games/".. game.PlaceId .."?privateServerLinkCode=".. game.JobId ..")"
+                        }
+                    },
+                    ["timestamp"] = os.date("!%Y-%m-%dT%H:%M:%S")
+                }
+            }
+        }
+        return AdminMessage
+    end
+end
+
+-- ARRA CUSTOM WEBHOOK --
+
+-- Link Mirrage
+local linksX1 = {
+    "https://discord.com/api/webhooks/1299018786896085032/v8KileiDavlAkgoBLeuBv7if6rxS4cY_F9BleeSydW2A7yeJyLd7cvbnAXwaEdHdpPMw"
+}
+
+-- Link Moon
+local linksX2 = {
+    "https://discord.com/api/webhooks/1299018533618847795/7qePTBYzih16NXzmDHEMq9xytTL4YKfSYMMeBQ8WkmrobgbseRoT_oz0PtOIxdnDN9DN"
+}
+
+-- Link Boss
+local linksX3 = {
+    "https://discord.com/api/webhooks/1299018717254127656/K2j_9MYaK3GaED0tCJK_fqMouSWB-JVq9DrCYOHKKHMzBBGi18Uto6l2bG101bg6Q-eh"
+}
+
+-- Link haki Legend
+local linksX5 = {
+    "https://discord.com/api/webhooks/1299018409358655619/XHrVsgpF9nXmUq1xlmeFgZyODSF77Gv-e3LOFE3q5wiHVX1_LTOid24qbQFXggg-P0_f"
+}
+
+-- Link Legendary Sword
+local linksX6 = {
+    "https://discord.com/api/webhooks/1299018313459830844/ZJaTyfZZ0X8AI9fh3ZP-fg78Jiq7U72nJA5LIQYBrs6bCuajE-JElGHpt0buWWJvFkl0"
+}
+
+-- Link Rare Item
+local linksX7 = {
+    "https://discord.com/api/webhooks/1305161333188329492/6nlXIljBUrZXzBYdJP1bG2C3iV0o_aNL1UOakn6Gi6h5rCsVwzOIFQnt1xDDauyq2wCD"
+}
+
+-- Link Rare Item
+local linksX8 = {
+    "https://discord.com/api/webhooks/1304480148996882442/gXxs3WBo44xfOc5RP8y9vAkWLsGv5cT-mCWxM7JRvQDXLSKdfVfLLTbnceRCJ8DF_r7p"
+}
+
+-- Link Kitsune
+local linksX9 = {
+    "https://discord.com/api/webhooks/1305917694562009231/nI6TdcCH4MdRSN0MyEea8--NUSFTPsjAXdSM5ALo_P4n10FKd6R-hyCZgYeMhe8tkp5P"
+}
+
+-- Link Low Player
+local linksX10 = {
+    "https://discord.com/api/webhooks/1305918028646584502/WOR7FCeeyOiiIZzddtrdz28nZEyDbKGUBwnVl93nHLwf5pTziHzJcrH5iCMq_veVbuPW"
+}
+
+-- Link Normal Haki
+local linksXY = {
+    "https://discord.com/api/webhooks/1305917075549847562/bjG1CNmGTdc2ItidyLSlvojXgYldAfhDvGwxnVsKqUkrCerUnz8IEB4P-gtVJg7oVaUe"
+}
+
+function CustomAlodieMirrage()
+    if game:GetService("Workspace").Map:FindFirstChild("MysticIsland") then
+        local AdminMessage = {
+            ["embeds"] = {
+                {
+                    ["title"] = "MIRRAGE FINDER | BLOX FRUIT",
+                    ["description"] = "Alodie Webhook Server !!",
+                    ["thumbnail"] = {
+                        ["url"] = "https://i.imgur.com/odfwxb3.png",
+                    },
+                    ["image"] = {
+                        ["url"] = "https://i.imgur.com/2kAOSOt.gif"  -- GIF
+                    },
+                    ["type"] = "rich",
+                    ["color"] = 3447003,
+                    ["fields"] = {
+                        {
+                            ["name"] = "**Mirrage Status:**",
+                            ["value"] = "``` Spawn ✅ ```",
+                            ["inline"] = true
+                        },
+                        {
+                            ["name"] = "**Full Moon Status:**",
+                            ["value"] = "``` ".. moonINF .." ```",
+                            ["inline"] = true
+                        },
+                        {
+                            ["name"] = "**Players In Server:**",
+                            ["value"] = "``` ".. playerCount .."/12 ```"
+                        },
+                        {
+                            ["name"] = "How To Use? Read Text Below!",
+                            ["value"] = "Copy Server Job Id And Paste it On Executor Then Click Execute Or Join instant Server"
+                        },
+                        {
+                            ["name"] = "**Simple Job Id:**",
+                            ["value"] = " "..game.JobId.."' "
+                        },
+                        {
+                            ["name"] = "**Server Job Id:**",
+                            ["value"] = "game.ReplicatedStorage['__ServerBrowser']:InvokeServer('teleport','"..game.JobId.."')"
+                        },
+                        {
+                            ["name"] = "**Join Server Instant:**",
+                            ["value"] = "[Click Here To Join Server](https://www.roblox.com/games/".. game.PlaceId .."?privateServerLinkCode=".. game.JobId ..")"
+                        }
+                    },
+                    ["timestamp"] = os.date("!%Y-%m-%dT%H:%M:%S")
+                }
+            }
+        }
+        return AdminMessage
+    end
+end
+
+function CustomAlodieKitsune()
+    if game:GetService("Workspace")["_WorldOrigin"].Locations:FindFirstChild("Kitsune Island") then
+        local AdminMessage = {
+            ["embeds"] = {
+                {
+                    ["title"] = "KITSUNE FINDER | BLOX FRUIT",
+                    ["description"] = "Alodie Webhook Server !!",
+                    ["thumbnail"] = {
+                        ["url"] = "https://i.imgur.com/acSTumQ.png",
+                    },
+                    ["image"] = {
+                        ["url"] = "https://i.imgur.com/2kAOSOt.gif"  -- GIF
+                    },
+                    ["type"] = "rich",
+                    ["color"] = 3447003,
+                    ["fields"] = {
+                        {
+                            ["name"] = "**Kitsune Status:**",
+                            ["value"] = "``` Spawn ✅ ```",
+                            ["inline"] = true
+                        },
+                        {
+                            ["name"] = "**Full Moon Status:**",
+                            ["value"] = "``` ".. moonINF .." ```",
+                            ["inline"] = true
+                        },
+                        {
+                            ["name"] = "**Players In Server:**",
+                            ["value"] = "``` ".. playerCount .."/12 ```"
+                        },
+                        {
+                            ["name"] = "How To Use? Read Text Below!",
+                            ["value"] = "Copy Server Job Id And Paste it On Executor Then Click Execute Or Join instant Server"
+                        },
+                        {
+                            ["name"] = "**Simple Job Id:**",
+                            ["value"] = " "..game.JobId.."' "
+                        },
+                        {
+                            ["name"] = "**Server Job Id:**",
+                            ["value"] = "game.ReplicatedStorage['__ServerBrowser']:InvokeServer('teleport','"..game.JobId.."')"
+                        },
+                        {
+                            ["name"] = "**Join Server Instant:**",
+                            ["value"] = "[Click Here To Join Server](https://www.roblox.com/games/".. game.PlaceId .."?privateServerLinkCode=".. game.JobId ..")"
+                        }
+                    },
+                    ["timestamp"] = os.date("!%Y-%m-%dT%H:%M:%S")
+                }
+            }
+        }
+        return AdminMessage
+    end
+end
+
+function CustomAlodieMoon()
+    if World3 then
+        local AdminMessage = {
+            ["embeds"] = {
+                {
+                    ["title"] = "MOON FINDER | BLOX FRUIT",
+                    ["description"] = "Alodie Webhook Server !!",
+                    ["thumbnail"] = {
+                        ["url"] = "https://i.imgur.com/BlqBgbx.png", 
+                    },
+                    ["image"] = {
+                        ["url"] = "https://i.imgur.com/2kAOSOt.gif"  -- GIF
+                    },
+                    ["type"] = "rich",
+                    ["color"] = 3447003,
+                    ["fields"] = {
+                        {
+                            ["name"] = "**Moon Phase:**",
+                            ["value"] = "``` ".. moonINF .." ```",
+                            ["inline"] = true
+                        },
+                        {
+                            ["name"] = "**Located:**",
+                            ["value"] = locatedSea,
+                            ["inline"] = true
+                        },
+                        {
+                            ["name"] = "**Players In Server:**",
+                            ["value"] = "``` ".. playerCount .."/12 ```"
+                        },
+                        {
+                            ["name"] = "How To Use? Read Text Below!",
+                            ["value"] = "Copy Server Job Id And Paste it On Executor Then Click Execute Or Join Instant Server"
+                        },
+                        {
+                            ["name"] = "**Simple Job Id:**",
+                            ["value"] = " ".. game.JobId .." "
+                        },
+                        {
+                            ["name"] = "**Server Job Id:**",
+                            ["value"] = "game.ReplicatedStorage['__ServerBrowser']:InvokeServer('teleport','".. game.JobId .."')"
+                        },
+                        {
+                            ["name"] = "**Join Server Instant:**",
+                            ["value"] = "[Click Here To Join Server](https://www.roblox.com/games/".. game.PlaceId .."?privateServerLinkCode=".. game.JobId ..")"
+                        }
+                    },
+                    ["timestamp"] = os.date("!%Y-%m-%dT%H:%M:%S")
+                }
+            }
+        }
+        return AdminMessage
+    end
+end
+
+function CustomAlodieLowServer()
+    local playerCount = #game:GetService("Players"):GetPlayers()
+    if playerCount < 5 then
+        local AdminMessage = {
+            ["embeds"] = {
+                {
+                    ["title"] = "LOW SERVER FINDER | BLOX FRUIT",
+                    ["description"] = "Alodie Webhook Server !!",
+                    ["thumbnail"] = {
+                        ["url"] = "https://i.imgur.com/BlqBgbx.png", 
+                    },
+                    ["image"] = {
+                        ["url"] = "https://i.imgur.com/2kAOSOt.gif"  -- GIF
+                    },
+                    ["type"] = "rich",
+                    ["color"] = 3447003,
+                    ["fields"] = {
+                        {
+                            ["name"] = "**Located:**",
+                            ["value"] = locatedSea,
+                            ["inline"] = true
+                        },
+                        {
+                            ["name"] = "**Players In Server:**",
+                            ["value"] = "``` ".. playerCount .."/12 ```", 
+                            ["inline"] = true
+                        },
+                        {
+                            ["name"] = "How To Use? Read Text Below!",
+                            ["value"] = "Copy Server Job Id And Paste it On Executor Then Click Execute Or Join Instant Server"
+                        },
+                        {
+                            ["name"] = "**Simple Job Id:**",
+                            ["value"] = " ".. game.JobId .." "
+                        },
+                        {
+                            ["name"] = "**Server Job Id:**",
+                            ["value"] = "game.ReplicatedStorage['__ServerBrowser']:InvokeServer('teleport','".. game.JobId .."')"
+                        },
+                        {
+                            ["name"] = "**Join Server Instant:**",
+                            ["value"] = "[Click Here To Join Server](https://www.roblox.com/games/".. game.PlaceId .."?privateServerLinkCode=".. game.JobId ..")"
+                        }
+                    },
+                    ["timestamp"] = os.date("!%Y-%m-%dT%H:%M:%S")
+                }
+            }
+        }
+        return AdminMessage
+    end
+end
+
+function CustomAlodieLegendHaki()
+    local TT = game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("ColorsDealer","1")
+    if table.find(LegendC, TT) then
+        local AdminMessage = {
+            ["embeds"] = {
+                {
+                    ["title"] = "LEGEND HAKI FINDER | BLOX FRUIT",
+                    ["description"] = "Alodie Webhook Server !!",
+                    ["thumbnail"] = {
+                        ["url"] = "https://i.imgur.com/kbJjgOe.png",
+                    },
+                    ["image"] = {
+                        ["url"] = "https://i.imgur.com/2kAOSOt.gif"  -- GIF
+                    },
+                    ["type"] = "rich",
+                    ["color"] = 3447003,
+                    ["fields"] = {
+                        {
+                            ["name"] = "**Haki Name:**",
+                            ["value"] = "```".. Haki .."```",
+                            ["inline"] = true
+                        },
+                        {
+                            ["name"] = "**Haki Price:**",
+                            ["value"] = HakiPrice,
+                            ["inline"] = true
+                        },
+                        {
+                            ["name"] = "**Located:**",
+                            ["value"] = locatedSea
+                        },
+                        {
+                            ["name"] = "How To Use? Read Text Below!",
+                            ["value"] = "Copy Server Job Id And Paste it On Executor Then Click Execute Or Join instant Server"
+                        },
+                        {
+                            ["name"] = "**Simple Job Id:**",
+                            ["value"] = " "..game.JobId.." "
+                        },
+                        {
+                            ["name"] = "**Server Job Id:**",
+                            ["value"] = "game.ReplicatedStorage['__ServerBrowser']:InvokeServer('teleport','"..game.JobId.."')"
+                        },
+                        {
+                            ["name"] = "**Join Server Instant:**",
+                            ["value"] = "[Click Here To Join Server](https://www.roblox.com/games/".. game.PlaceId .."?privateServerLinkCode=".. game.JobId ..")"
+                        }
+                    },
+                    ["timestamp"] = os.date("!%Y-%m-%dT%H:%M:%S")
+                }
+            }
+        }
+        return AdminMessage
+    end
+end
+
+function CustomAlodieNormalHaki()
+    local TT = game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("ColorsDealer","1")
+    if table.find(validColors, TT) then
+        local AdminMessage = {
+            ["embeds"] = {
+                {
+                    ["title"] = "NORMAL HAKI FINDER | BLOX FRUIT",
+                    ["description"] = "Alodie Webhook Server !!",
+                    ["thumbnail"] = {
+                        ["url"] = "https://i.imgur.com/kbJjgOe.png",
+                    },
+                    ["image"] = {
+                        ["url"] = "https://i.imgur.com/2kAOSOt.gif"  -- GIF
+                    },
+                    ["type"] = "rich",
+                    ["color"] = 3447003,
+                    ["fields"] = {
+                        {
+                            ["name"] = "**Haki Name:**",
+                            ["value"] = "```".. Haki .."```",
+                            ["inline"] = true
+                        },
+                        {
+                            ["name"] = "**Haki Price:**",
+                            ["value"] = HakiPrice,
+                            ["inline"] = true
+                        },
+                        {
+                            ["name"] = "**Located:**",
+                            ["value"] = locatedSea
+                        },
+                        {
+                            ["name"] = "How To Use? Read Text Below!",
+                            ["value"] = "Copy Server Job Id And Paste it On Executor Then Click Execute Or Join instant Server"
+                        },
+                        {
+                            ["name"] = "**Simple Job Id:**",
+                            ["value"] = " "..game.JobId.." "
+                        },
+                        {
+                            ["name"] = "**Server Job Id:**",
+                            ["value"] = "game.ReplicatedStorage['__ServerBrowser']:InvokeServer('teleport','"..game.JobId.."')"
+                        },
+                        {
+                            ["name"] = "**Join Server Instant:**",
+                            ["value"] = "[Click Here To Join Server](https://www.roblox.com/games/".. game.PlaceId .."?privateServerLinkCode=".. game.JobId ..")"
+                        }
+                    },
+                    ["timestamp"] = os.date("!%Y-%m-%dT%H:%M:%S")
+                }
+            }
+        }
+        return AdminMessage
+    end
+end
+
+function CustomAlodieLegendSword()
+    local AnJay = game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("LegendarySwordDealer","1")
+    if table.find(SwordOcon, AnJay) and game.PlaceId == 4442272183 then
+        local AdminMessage = {
+            ["embeds"] = {
+                {
+                    ["title"] = "LEGEND SWORD FINDER | BLOX FRUIT",
+                    ["description"] = "Alodie Webhook Server !!",
+                    ["thumbnail"] = {
+                        ["url"] = "https://i.imgur.com/sM64Vat.png",
+                    },
+                    ["image"] = {
+                        ["url"] = "https://i.imgur.com/2kAOSOt.gif"  -- GIF
+                    },
+                    ["type"] = "rich",
+                    ["color"] = 3447003,
+                    ["fields"] = {
+                        {
+                            ["name"] = "**Sword Name:**",
+                            ["value"] = "``` ".. SwordX .." ```",
+                            ["inline"] = true
+                        },
+                        {
+                            ["name"] = "**Located:**",
+                            ["value"] = "``` Seacond Sea ```",
+                            ["inline"] = true
+                        },
+                        {
+                            ["name"] = "**Players In Server:**",
+                            ["value"] = "``` ".. playerCount .."/12 ```"
+                        },
+                        {
+                            ["name"] = "How To Use? Read Text Below!",
+                            ["value"] = "Copy Server Job Id And Paste it On Executor Then Click Execute Or Join instant Server"
+                        },
+                        {
+                            ["name"] = "**Simple Job Id:**",
+                            ["value"] = " "..game.JobId.." "
+                        },
+                        {
+                            ["name"] = "**Server Job Id:**",
+                            ["value"] = "game.ReplicatedStorage['__ServerBrowser']:InvokeServer('teleport','"..game.JobId.."')"
+                        },
+                        {
+                            ["name"] = "**Join Server Instant:**",
+                            ["value"] = "[Click Here To Join Server](https://www.roblox.com/games/".. game.PlaceId .."?privateServerLinkCode=".. game.JobId ..")"
+                        }
+                    },
+                    ["timestamp"] = os.date("!%Y-%m-%dT%H:%M:%S")
+                }
+            }
+        }
+        return AdminMessage
+    end
+end
+
+function CustomAlodieBossRaid()
+    for i, v in pairs(game:GetService("ReplicatedStorage"):GetChildren()) do
+        if table.find(worldBossNames, v.Name) then
+            local AdminMessage = {
+                ["embeds"] = {
+                    {
+                        ["title"] = "BOSS FINDER | BLOX FRUIT",
+                        ["description"] = "Alodie Webhook Server !!",
+                        ["thumbnail"] = {
+                            ["url"] = "https://i.imgur.com/DFvurWD.png",
+                        },
+                        ["image"] = {
+                            ["url"] = "https://i.imgur.com/2kAOSOt.gif"  -- GIF
+                        },
+                        ["type"] = "rich",
+                        ["color"] = 3447003,
+                        ["fields"] = {
+                            {
+                                ["name"] = "**Boss Name:**",
+                                ["value"] = "``` ".. v.Name .." ```",
+                                ["inline"] = true
+                            },
+                            {
+                                ["name"] = "**Boss Health:**",
+                                ["value"] = "``` Health : ".. game:GetService("ReplicatedStorage")[v.Name].Humanoid.Health .." / ".. game:GetService("ReplicatedStorage")[v.Name].Humanoid.MaxHealth .." ```",
+                                ["inline"] = true
+                            },
+                            {
+                                ["name"] = "**Located:**",
+                                ["value"] = locatedSea,
+                                ["inline"] = true
+                            },
+                            {
+                                ["name"] = "**Players In Server:**",
+                                ["value"] = "``` ".. playerCount .."/12 ```"
+                            },
+                            {
+                                ["name"] = "How To Use? Read Text Below!",
+                                ["value"] = "Copy Server Job Id And Paste it On Executor Then Click Execute Or Join instant Server"
+                            },
+                            {
+                                ["name"] = "**Simple Job Id:**",
+                                ["value"] = " "..game.JobId.." "
+                            },
+                            {
+                                ["name"] = "**Server Job Id:**",
+                                ["value"] = "game.ReplicatedStorage['__ServerBrowser']:InvokeServer('teleport','"..game.JobId.."')"
+                            },
+                            {
+                                ["name"] = "**Join Server Instant:**",
+                                ["value"] = "[Click Here To Join Server](https://www.roblox.com/games/".. game.PlaceId .."?privateServerLinkCode=".. game.JobId ..")"
+                            }
+                        },
+                        ["timestamp"] = os.date("!%Y-%m-%dT%H:%M:%S")
+                    }
+                }
+            }
+            return AdminMessage
+        end
+    end
+end
+
+
+local targetItems = {"God's Chalice", "Sweet Chalice", "Fist of Darkness"}
+function CustomAlodieRareItem()
+    for _, player in pairs(game.Players:GetPlayers()) do
+        local backpack = player.Backpack
+        for _, item in pairs(backpack:GetChildren()) do
+            if table.find(targetItems, item.Name) then
+                local AdminMessage = {
+                    ["embeds"] = {
+                        {
+                            ["title"] = "RARE ITEM FINDER | BLOX FRUIT",
+                            ["description"] = "Alodie Webhook Server !!",
+                            ["thumbnail"] = {
+                                ["url"] = "https://i.imgur.com/5luR9N3.png",
+                            },
+                            ["image"] = {
+                                ["url"] = "https://i.imgur.com/2kAOSOt.gif"  -- GIF
+                            },
+                            ["type"] = "rich",
+                            ["color"] = 3447003,
+                            ["fields"] = {
+                                {
+                                    ["name"] = "**Information:**",
+                                    ["value"] = "```Player Name :".. player.Name ..", Get Item :" .. item.Name .. "```",
+                                    ["inline"] = true
+                                },
+                                {
+                                    ["name"] = "**Located:**",
+                                    ["value"] = locatedSea,
+                                    ["inline"] = true
+                                },
+                                {
+                                    ["name"] = "**Players In Server:**",
+                                    ["value"] = "```".. playerCount .."/12```"
+                                },
+                                {
+                                    ["name"] = "How To Use? Read Text Below!",
+                                    ["value"] = "Copy Server Job Id And Paste it On Executor Then Click Execute Or Join Instant Server"
+                                },
+                                {
+                                    ["name"] = "**Simple Job Id:**",
+                                    ["value"] = " "..game.JobId.." "
+                                },
+                                {
+                                    ["name"] = "**Server Job Id:**",
+                                    ["value"] = "game.ReplicatedStorage['__ServerBrowser']:InvokeServer('teleport','"..game.JobId.."')"
+                                },
+                                {
+                                    ["name"] = "**Join Server Instant:**",
+                                    ["value"] = "[Click Here To Join Server](https://www.roblox.com/games/".. game.PlaceId .."?privateServerLinkCode=".. game.JobId ..")"
+                                }
+                            },
+                            ["timestamp"] = os.date("!%Y-%m-%dT%H:%M:%S")
+                        }
+                    }
+                }
+                return AdminMessage
+            end
+        end
+    end
+end
+
+
+function CustomAlodieFruitFinder()
+    for _, v in next, workspace:GetChildren() do
+        if v.Name:find("Fruit") and (v:IsA("Model") or v:IsA("Tool")) then
+            local AdminMessage = {
+                ["embeds"] = {
+                    {
+                        ["title"] = "FRUIT FINDER | BLOX FRUIT",
+                        ["description"] = "Alodie Webhook Server !!",
+                        ["thumbnail"] = {
+                            ["url"] = "https://i.imgur.com/lX6qhTx.png",
+                        },
+                        ["image"] = {
+                            ["url"] = "https://i.imgur.com/2kAOSOt.gif"  -- GIF
+                        },
+                        ["type"] = "rich",
+                        ["color"] = 3447003,
+                        ["fields"] = {
+                            {
+                                ["name"] = "**Fruit Name:**",
+                                ["value"] = "``` ".. v.Name .." ```",
+                                ["inline"] = true
+                            },
+                            {
+                                ["name"] = "**Located:**",
+                                ["value"] = locatedSea,
+                                ["inline"] = true
+                            },
+                            {
+                                ["name"] = "**Players In Server:**",
+                                ["value"] = "``` ".. playerCount .."/12 ```"
+                            },
+                            {
+                                ["name"] = "How To Use? Read Text Below!",
+                                ["value"] = "Copy Server Job Id And Paste it On Executor Then Click Execute Or Join instant Server"
+                            },
+                            {
+                                ["name"] = "**Simple Job Id:**",
+                                ["value"] = " "..game.JobId.." "
+                            },
+                            {
+                                ["name"] = "**Server Job Id:**",
+                                ["value"] = "game.ReplicatedStorage['__ServerBrowser']:InvokeServer('teleport','"..game.JobId.."')"
+                            },
+                            {
+                                ["name"] = "**Join Server Instant:**",
+                                ["value"] = "[Click Here To Join Server](https://www.roblox.com/games/".. game.PlaceId .."?privateServerLinkCode=".. game.JobId ..")"
+                            }
+                        },
+                        ["timestamp"] = os.date("!%Y-%m-%dT%H:%M:%S")
+                    }
+                }
+            }
+            return AdminMessage
+        end
+    end
+end
+
+task.spawn(function()
+    while task.wait() do
+        pcall(function()
+            wb(links6, Sword())
+            wait(0.2)
+            wb(links8, KitsuneIsland())
+            wait(0.2)
+            wb(links9, PrehistoricIsland())
+            wait(0.2)
+            wb(links10, FreezingHydraIsland())
+            wait(0.2) 
+            wb(links1, Mirrage())
+            wait(0.2)
+            wb(links2, Moon())
+            wait(0.2)
+            wb(links3, Boss())
+            wait(0.2)
+            wb(links4, HakiS())
+            wait(0.2)
+            wb(links5, LHaki())
+            wait(0.2)
+            wb(links7, FruitFinder())
+            wait(0.2) 
+            wb(linksX6, CustomAlodieLegendSword())
+            wait(0.2)
+            wb(linksX7, CustomAlodieRareItem())
+            wait(0.2)
+            wb(linksX8, CustomAlodieFruitFinder())
+            wait(0.2)
+            wb(linksX9, CustomAlodieKitsune())
+            wait(0.2)
+            wb(linksX10, CustomAlodieLowServer())
+            wait(0.2) 
+            wb(linksX1, CustomAlodieMirrage())
+            wait(0.2) 
+            wb(linksX2, CustomAlodieMoon())
+            wait(0.2) 
+            wb(linksX3, CustomAlodieBossRaid())
+            wait(0.2)
+            wb(linksX5, CustomAlodieLegendHaki())
+            wait(0.2)
+            wb(linksXY, CustomAlodieNormalHaki())
+            wait(200)
+        end)
+    end
+end)
