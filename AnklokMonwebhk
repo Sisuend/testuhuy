@@ -146,10 +146,9 @@ local links1 = {
     "https://discord.com/api/webhooks/1139480661892276255/7JMEf-cJfvsHND_4pm47LKAnnm1Y4OGMll2ARNGUpczPZZlpTMKvtPZH76tR3nqEyMJZ", -- Sonic
     "https://discord.com/api/webhooks/1139498274542334042/qvh_beJfsIXYVYZABxLjLomb-ImL9J9zR-M6afG2ZKeBNJU0cnaDfRyBFx4A821-BMMP", -- isnah
     "https://discord.com/api/webhooks/1282722133016842311/UotuNmIMYIr2yqlIueaf8Gdixf7pOWZg6tBe9lg2Bcu38HYpf0qkhGNUlep9NgTCuR74",
-    "https://discord.com/api/webhooks/1297489920600047699/TJRvL6WyVRN1XjLQdngD0QOy975g2AfBTvY6lXQA8kZdCv2jE7sEz2nTtU9w8ihHnOAt",
+    "https://discord.com/api/webhooks/1326087902148558888/e36g7_hmwmG8JdJ5N0lQZ1YV0Utkyd9INe-oL12C1yU-SyOY6UuWkLCKNFuzmbOal92b",
     "https://discord.com/api/webhooks/1299703780341977140/9V7brnp7X26eX0q5lmnHFbHHsQ2dpKW9HGz6-Kl9KzXUciw8WxO7LOQXSBAMbhdzpEaV",
     "https://discord.com/api/webhooks/1317084431411843092/_DrBw5bFfmuC04HcV2BMNUelTidW8NBt9RNPRJ3_LoBA-lFTxzyABZnK2cVTkfeoFpOK",
-    "https://discord.com/api/webhooks/1326087902148558888/e36g7_hmwmG8JdJ5N0lQZ1YV0Utkyd9INe-oL12C1yU-SyOY6UuWkLCKNFuzmbOal92b",
     "https://discord.com/api/webhooks/1281945533577039983/_xcIu9jYZIOWlAKW8usjT8NbuXFJuINFOvKrf4KpApiZFTY6CuglhU3dPYI8Etwu6aqY",
     "https://discordapp.com/api/webhooks/1241221370113949726/qxgo3-jTBLRaGm4irC7pGS1L_hS_2CgJDBqOJKQY0NDNOCe41iAnZqn-emCF01HZ1-Qj" -- Ganteng Hub
 }
