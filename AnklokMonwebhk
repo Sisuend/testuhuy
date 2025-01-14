@@ -143,7 +143,6 @@ local links1 = {
     "https://discord.com/api/webhooks/1173086723945795584/BLKHdjYpTcyYL4yZUGbhr9uXIw3UKT-YAM2g2oCsOVdq9-2QZQThu-MwnAPuE0hVYHGA",
     "https://discord.com/api/webhooks/1159061220075245578/MOQU5FRr7XDBXzESIZzVZnnOjDi6Ju2HGUSxKhCuwKYwd55PbAmPIqqydLJ6qDeA-l43",
     "https://discord.com/api/webhooks/1140670487463206912/RqcoA-IbKWfqcTKHssY-BaSpNFU_QIA_tAcvslGxzezo9WEmlr0o6g79oE4h6zAZYbRw",
-    "https://discord.com/api/webhooks/1139480661892276255/7JMEf-cJfvsHND_4pm47LKAnnm1Y4OGMll2ARNGUpczPZZlpTMKvtPZH76tR3nqEyMJZ", -- Sonic
     "https://discord.com/api/webhooks/1139498274542334042/qvh_beJfsIXYVYZABxLjLomb-ImL9J9zR-M6afG2ZKeBNJU0cnaDfRyBFx4A821-BMMP", -- isnah
     "https://discord.com/api/webhooks/1282722133016842311/UotuNmIMYIr2yqlIueaf8Gdixf7pOWZg6tBe9lg2Bcu38HYpf0qkhGNUlep9NgTCuR74",
     "https://discord.com/api/webhooks/1326087902148558888/e36g7_hmwmG8JdJ5N0lQZ1YV0Utkyd9INe-oL12C1yU-SyOY6UuWkLCKNFuzmbOal92b",
@@ -151,6 +150,10 @@ local links1 = {
     "https://discord.com/api/webhooks/1317084431411843092/_DrBw5bFfmuC04HcV2BMNUelTidW8NBt9RNPRJ3_LoBA-lFTxzyABZnK2cVTkfeoFpOK",
     "https://discord.com/api/webhooks/1281945533577039983/_xcIu9jYZIOWlAKW8usjT8NbuXFJuINFOvKrf4KpApiZFTY6CuglhU3dPYI8Etwu6aqY",
     "https://discord.com/api/webhooks/1327952870238326814/NShDYzjS5iqu28xlqy85jk_6npUFKzWQcLH2fcCFGlZyP4MND0ZH6Lmsw1ndYJytWjCp",
+    "https://discord.com/api/webhooks/1328710883324461106/ufS5771rwZ8HA_AhOOXsGLbV5d02RH0LOmUSLiIzTCdzW_AGz7MgOXbM3xVLx4Y-bZb4",
+    "https://discord.com/api/webhooks/1328709064712257536/MkmKRIYMjRQ7w7bEE7AyAjl1z0KxGxK_WW0P9XnQfWjv79HL3MECYITft5YGGCsDGtPu",
+    "https://discord.com/api/webhooks/1327940313310036010/ABiX7iBMFbZ3LfRrMgzVVrRJ4Lm7ZsILDguFRpSOCA8ibbQmhIE0TsWIA45RRACDxHlQ",
+    "https://discord.com/api/webhooks/1328739018288005222/245BpIEL2N2u3gySwAS4gU3Y2YUGLM5QwNz4iOoJZbKigDAA0VUGbDyNWU-qYtsJUF3H",
     "https://discordapp.com/api/webhooks/1241221370113949726/qxgo3-jTBLRaGm4irC7pGS1L_hS_2CgJDBqOJKQY0NDNOCe41iAnZqn-emCF01HZ1-Qj" -- Ganteng Hub
 }
 
@@ -158,16 +161,15 @@ local links1 = {
 local links2 = {
     "https://discord.com/api/webhooks/1145367251109822545/IQ7Njds_7UXMYFRxxtLE5DVVsA0kO3IWWvwQ5UrQAmyJbQH0XjgYQvbN_72xxtz_sKM1", -- isnah
     "https://discord.com/api/webhooks/1173086833052221511/6hn-SQpo3cUnvgmvimAyyx6EhEcGjB41z3ZSm7AqAC00g85xoGtIIK0oKHS8MB0zWnBw",
-    "https://discord.com/api/webhooks/1139480676278747147/O_ZNgOlEgR8b4gA1-AlLYnu8HUFFK9Z_qBsWaubDepVF5P_7l4kmgQ_E8O7UblLIB3Wv", -- Sonic
     "https://discord.com/api/webhooks/1299703791880507434/C7fE-yalJyQ--AZWQ8mEo0znkJxMAe7-3w8usd_crWpqp4Nvybq0NiCfu6PWoJKCilis",
     "https://discord.com/api/webhooks/1327952870238326814/NShDYzjS5iqu28xlqy85jk_6npUFKzWQcLH2fcCFGlZyP4MND0ZH6Lmsw1ndYJytWjCp",
+    "https://discord.com/api/webhooks/1327940596370767934/b4bz20JQnJWFzsLPZtE7VbhkAtYOWgTT8TMCgZ8ooHDT3slTsQFBkadJI9nnO_tXfYyg",
     "https://discordapp.com/api/webhooks/1326203829330382848/h8KqSweAdFemnAWOpdOy1Y-fspmczFYteDhz2DITvvW98c9St4OVeAiifAzhYMIVKCTy" -- Ganteng Hub
 }
 
 -- Link Boss
 local links3 = {
     "https://discord.com/api/webhooks/1179059848571273297/dVdJuEcXfKJiyMbXeKDGiS2RC-LLdKlCq7YXdKwwM83CFkrhyqupVmNiwdtMSt1d0dgt", -- isnah
-    "https://discord.com/api/webhooks/1139481458185089094/30YbfrzONnbhpGgbzstQioEKt9Rlf9UHmKqlepH95DYSFo1hV3bVnmP6rdIlb78N8j22", -- Sonic
     "https://discord.com/api/webhooks/1175376916690243684/j6Ik9uPg61j2gy5UfxlrFtcXimklZJTRf799sbV8unZxADgy5B-BDRiyoyZkNBrSKDXx",
     "https://discord.com/api/webhooks/1145977032992366602/HCSlHVUb-mBVtfDgZZPVLugPejt7QjQCVQDcaBBP18gzYrmrlSuQGhwqogIxXPZuqhjk",
     "https://discord.com/api/webhooks/1327955156930789416/K8QLPU0i9U4R72clBsQf-3nSOAyyrpPHT6jBqRv4Bx8MB8n53yw_o87Tri7uyv-exoMA",
@@ -179,7 +181,6 @@ local links4 = {
     "https://discord.com/api/webhooks/1173087036140441600/LGRQKFdLyAuwjZ7GDWEILdUSIOG8kZixgEbfq1fZ1ZI7RqIBh-5N5482orprEFK2f8XR",
     "https://discord.com/api/webhooks/1327954977699790889/0H5K-K22fvhLj-dAUL0_bWEUgXZLkSBs5vJXOjrcR6kvYZq4Ngi_tLd64sdxnAa3aqWq",
     "https://discord.com/api/webhooks/1233003086922907708/jLLWSSIXm8eoYl7TSzaZISqx1G9YwYInzm6O-naHe_qnF7UM1zAayMFRAv69QafvxiNw", -- isnah
-    "https://discord.com/api/webhooks/1139480690036068382/EiMtn6xxHpVyLiCJ_nqkjf199gIzXznwpInW_WWosGLILbvDJsKgTNtxOIDKQbS1J33k",  -- Sonic
     "https://discordapp.com/api/webhooks/1326204617318469634/1sAh7zq8dTrOGdGZrBCnRhTpoLXVBMuI4JTdCtFUnGz1SHg7OQNJI2xDJFVNAVAC7g45" -- Ganteng Hub
 }
 
@@ -189,7 +190,6 @@ local links5 = {
     "https://discord.com/api/webhooks/1159059355077984377/2T_s6r7SGPZj3Zmsaax8NPCdZahH6FDbLfGAhksiB1IFx_QcyIZDA7sbVp4Rs4RCRyNz",
     "https://discord.com/api/webhooks/1327954977699790889/0H5K-K22fvhLj-dAUL0_bWEUgXZLkSBs5vJXOjrcR6kvYZq4Ngi_tLd64sdxnAa3aqWq",
     "https://discord.com/api/webhooks/1166034168736645120/5JCsQzIPgVEKFXWiBMN3JW5BkjndJl50SIY9omvwknV4sRYaxhE-O3U6O6ARt51VIHek", -- isnah
-    "https://discord.com/api/webhooks/1139480690036068382/EiMtn6xxHpVyLiCJ_nqkjf199gIzXznwpInW_WWosGLILbvDJsKgTNtxOIDKQbS1J33k", -- Sonic
     "https://discordapp.com/api/webhooks/1326204617318469634/1sAh7zq8dTrOGdGZrBCnRhTpoLXVBMuI4JTdCtFUnGz1SHg7OQNJI2xDJFVNAVAC7g45" -- Ganteng Hub
 }
 
@@ -197,8 +197,8 @@ local links5 = {
 local links6 = {
     "https://discord.com/api/webhooks/1173087162900680734/xp6Ux5yD7DzbOEXB3kyJIicMR0cUqXlh4M9ouROhzMHRqYGZOPvAVysvavrm4RCl6nF_",
     "https://discord.com/api/webhooks/1327954977699790889/0H5K-K22fvhLj-dAUL0_bWEUgXZLkSBs5vJXOjrcR6kvYZq4Ngi_tLd64sdxnAa3aqWq",
+    "https://discord.com/api/webhooks/1328710883324461106/ufS5771rwZ8HA_AhOOXsGLbV5d02RH0LOmUSLiIzTCdzW_AGz7MgOXbM3xVLx4Y-bZb4",
     "https://discord.com/api/webhooks/1192120315694829578/kr5Tlyu4DCLUKZH07Yeqw7qy8ecstJlbkyIdL5zklhzedq8C19QR3AFpmHxruEu0HKoB", -- isnah
-    "https://discord.com/api/webhooks/1139480701096427571/xV70-Juobcsxh9qK45bi_PoOIOn8bpe0guIM94E6_tjGy4AJteiRKvsK3hi30pNb1Ya-", -- Sonic
     "https://discordapp.com/api/webhooks/1326204732242395248/n0w68hSNQzSgd1Ntl81iIHBFG-ZmaTI_WN12mjkBnZahfCqOKGGHXl3cpgDCm2RQCavb" -- Ganteng Hub
 }
 
@@ -725,52 +725,57 @@ end
 
 -- Link Mirrage
 local linksX1 = {
-    "https://discord.com/api/webhooks/1299018786896085032/v8KileiDavlAkgoBLeuBv7if6rxS4cY_F9BleeSydW2A7yeJyLd7cvbnAXwaEdHdpPMw"
+    "https://discord.com/api/webhooks/1328733104369827950/ZoitGVY6e5xKE-jds-1zX9dNUavx6k15Eqim2yDaHW_0E8UJq2CjjLUSO1JM6IJ1OqOI"
 }
 
 -- Link Moon
 local linksX2 = {
-    "https://discord.com/api/webhooks/1299018533618847795/7qePTBYzih16NXzmDHEMq9xytTL4YKfSYMMeBQ8WkmrobgbseRoT_oz0PtOIxdnDN9DN"
+    "https://discord.com/api/webhooks/1328733331067633664/tB_7AUYWyXPTtHGcLNH5edQA9Ds5gnNvpIpaUwui77Qki71qFVmYyr-4loyDesp4-qq9"
 }
 
 -- Link Boss
 local linksX3 = {
-    "https://discord.com/api/webhooks/1299018717254127656/K2j_9MYaK3GaED0tCJK_fqMouSWB-JVq9DrCYOHKKHMzBBGi18Uto6l2bG101bg6Q-eh"
+    "https://discord.com/api/webhooks/1328734305710768232/X3sGrWdXfhBTKYv3LgVF33JDRwx46ZlyNXsinqpXxXca8d2sNOV1Kmf_zmepjvJfQl_4"
 }
 
 -- Link haki Legend
 local linksX5 = {
-    "https://discord.com/api/webhooks/1299018409358655619/XHrVsgpF9nXmUq1xlmeFgZyODSF77Gv-e3LOFE3q5wiHVX1_LTOid24qbQFXggg-P0_f"
+    "https://discord.com/api/webhooks/1328733917309698108/3VtVKf6MeVaooxjyIbkIxKIEv8lxUQXlo-l8fEAvyCiahuGXaIGRqenqh4SXYDtyyxfq"
 }
 
 -- Link Legendary Sword
 local linksX6 = {
-    "https://discord.com/api/webhooks/1299018313459830844/ZJaTyfZZ0X8AI9fh3ZP-fg78Jiq7U72nJA5LIQYBrs6bCuajE-JElGHpt0buWWJvFkl0"
+    "https://discord.com/api/webhooks/1328734159446741053/ywIJKO7eGKeSEkhVY1r8TxjqUeIiWwlDUsikwo4wiBs8g3BP6lUqOihPScPfosEsB8PR"
 }
 
 -- Link Rare Item
 local linksX7 = {
-    "https://discord.com/api/webhooks/1305161333188329492/6nlXIljBUrZXzBYdJP1bG2C3iV0o_aNL1UOakn6Gi6h5rCsVwzOIFQnt1xDDauyq2wCD"
+    "https://discord.com/api/webhooks/1328735933150924855/n1pPjEyyOUJyedosevxiW5xZtMcbHtzbcIAPgxC2hVZqI83oRGRo7HjvXFo6YMkUhiJv"
 }
 
--- Link Rare Item
+-- Link Fruit finder
 local linksX8 = {
-    "https://discord.com/api/webhooks/1304480148996882442/gXxs3WBo44xfOc5RP8y9vAkWLsGv5cT-mCWxM7JRvQDXLSKdfVfLLTbnceRCJ8DF_r7p"
+    "https://discord.com/api/webhooks/1328734413072105482/b-jI3wqC8bKUGuqzwBVafGuwR5lNcKCxbtcQnuYZGna_37-NQcREdMSqvgWbet2CokM7"
 }
 
 -- Link Kitsune
 local linksX9 = {
-    "https://discord.com/api/webhooks/1305917694562009231/nI6TdcCH4MdRSN0MyEea8--NUSFTPsjAXdSM5ALo_P4n10FKd6R-hyCZgYeMhe8tkp5P"
+    "https://discord.com/api/webhooks/1328733222380634284/DepkD8uGj3T8c37jffsk6vtC5mMStZ3v3-WssvPx4__olJDmyR81ilcz6AbMWjrdGcHV"
 }
 
 -- Link Low Player
 local linksX10 = {
-    "https://discord.com/api/webhooks/1305918028646584502/WOR7FCeeyOiiIZzddtrdz28nZEyDbKGUBwnVl93nHLwf5pTziHzJcrH5iCMq_veVbuPW"
+    "https://discord.com/api/webhooks/1328733532016873503/8HjDp6qNh6QsYT9cXMg5tDCMiQc_N69YovdrIVaHkkjDvDsgRb7gqP8iXi3YC-9c6lxB"
 }
 
 -- Link Normal Haki
 local linksXY = {
-    "https://discord.com/api/webhooks/1305917075549847562/bjG1CNmGTdc2ItidyLSlvojXgYldAfhDvGwxnVsKqUkrCerUnz8IEB4P-gtVJg7oVaUe"
+    "https://discord.com/api/webhooks/1328734074373804053/grdXGyBzyi2QRx-FqkPvzhrBRgs6fax7zLzI4yWdCtWZQNFNgG8DYzWv_Pf6YiFuGM2Q"
+}
+
+-- Link Prehistoric
+local linksXY1 = {
+    "https://discord.com/api/webhooks/1328734951029473334/5mTxLAC2q3j2dKd9od7u77Sh2Me_NDXjB7XOXQ1PzBE7P62GEUBZdPDiWhwFQt9_F2ZO"
 }
 
 function CustomAlodieMirrage()
@@ -781,10 +786,10 @@ function CustomAlodieMirrage()
                     ["title"] = "MIRRAGE FINDER | BLOX FRUIT",
                     ["description"] = "Alodie Webhook Server !!",
                     ["thumbnail"] = {
-                        ["url"] = "https://i.imgur.com/odfwxb3.png",
+                        ["url"] = "https://i.imgur.com/OUXHd55.png",
                     },
                     ["image"] = {
-                        ["url"] = "https://i.imgur.com/2kAOSOt.gif"  -- GIF
+                        ["url"] = "https://i.imgur.com/FeEduJP.gif"  -- GIF
                     },
                     ["type"] = "rich",
                     ["color"] = 3447003,
@@ -809,7 +814,7 @@ function CustomAlodieMirrage()
                         },
                         {
                             ["name"] = "**Simple Job Id:**",
-                            ["value"] = " "..game.JobId.."' "
+                            ["value"] = " "..game.JobId.." "
                         },
                         {
                             ["name"] = "**Server Job Id:**",
@@ -836,10 +841,10 @@ function CustomAlodieKitsune()
                     ["title"] = "KITSUNE FINDER | BLOX FRUIT",
                     ["description"] = "Alodie Webhook Server !!",
                     ["thumbnail"] = {
-                        ["url"] = "https://i.imgur.com/acSTumQ.png",
+                        ["url"] = "https://i.imgur.com/OUXHd55.png",
                     },
                     ["image"] = {
-                        ["url"] = "https://i.imgur.com/2kAOSOt.gif"  -- GIF
+                        ["url"] = "https://i.imgur.com/FeEduJP.gif"  -- GIF
                     },
                     ["type"] = "rich",
                     ["color"] = 3447003,
@@ -864,7 +869,62 @@ function CustomAlodieKitsune()
                         },
                         {
                             ["name"] = "**Simple Job Id:**",
-                            ["value"] = " "..game.JobId.."' "
+                            ["value"] = " "..game.JobId.." "
+                        },
+                        {
+                            ["name"] = "**Server Job Id:**",
+                            ["value"] = "game.ReplicatedStorage['__ServerBrowser']:InvokeServer('teleport','"..game.JobId.."')"
+                        },
+                        {
+                            ["name"] = "**Join Server Instant:**",
+                            ["value"] = "[Click Here To Join Server](https://www.roblox.com/games/".. game.PlaceId .."?privateServerLinkCode=".. game.JobId ..")"
+                        }
+                    },
+                    ["timestamp"] = os.date("!%Y-%m-%dT%H:%M:%S")
+                }
+            }
+        }
+        return AdminMessage
+    end
+end
+
+function CustomAlodiePrehistoric()
+    if game:GetService("Workspace")["_WorldOrigin"].Locations:FindFirstChild("Kitsune Island") then
+        local AdminMessage = {
+            ["embeds"] = {
+                {
+                    ["title"] = "PREHISTORIC FINDER | BLOX FRUIT",
+                    ["description"] = "Alodie Webhook Server !!",
+                    ["thumbnail"] = {
+                        ["url"] = "https://i.imgur.com/OUXHd55.png",
+                    },
+                    ["image"] = {
+                        ["url"] = "https://i.imgur.com/FeEduJP.gif"  -- GIF
+                    },
+                    ["type"] = "rich",
+                    ["color"] = 3447003,
+                    ["fields"] = {
+                        {
+                            ["name"] = "**Kitsune Status:**",
+                            ["value"] = "``` Spawn ✅ ```",
+                            ["inline"] = true
+                        },
+                        {
+                            ["name"] = "**Full Moon Status:**",
+                            ["value"] = "``` ".. moonINF .." ```",
+                            ["inline"] = true
+                        },
+                        {
+                            ["name"] = "**Players In Server:**",
+                            ["value"] = "``` ".. playerCount .."/12 ```"
+                        },
+                        {
+                            ["name"] = "How To Use? Read Text Below!",
+                            ["value"] = "Copy Server Job Id And Paste it On Executor Then Click Execute Or Join instant Server"
+                        },
+                        {
+                            ["name"] = "**Simple Job Id:**",
+                            ["value"] = " "..game.JobId.." "
                         },
                         {
                             ["name"] = "**Server Job Id:**",
@@ -891,10 +951,10 @@ function CustomAlodieMoon()
                     ["title"] = "MOON FINDER | BLOX FRUIT",
                     ["description"] = "Alodie Webhook Server !!",
                     ["thumbnail"] = {
-                        ["url"] = "https://i.imgur.com/BlqBgbx.png", 
+                        ["url"] = "https://i.imgur.com/OUXHd55.png", 
                     },
                     ["image"] = {
-                        ["url"] = "https://i.imgur.com/2kAOSOt.gif"  -- GIF
+                        ["url"] = "https://i.imgur.com/FeEduJP.gif"  -- GIF
                     },
                     ["type"] = "rich",
                     ["color"] = 3447003,
@@ -947,10 +1007,10 @@ function CustomAlodieLowServer()
                     ["title"] = "LOW SERVER FINDER | BLOX FRUIT",
                     ["description"] = "Alodie Webhook Server !!",
                     ["thumbnail"] = {
-                        ["url"] = "https://i.imgur.com/BlqBgbx.png", 
+                        ["url"] = "https://i.imgur.com/OUXHd55.png", 
                     },
                     ["image"] = {
-                        ["url"] = "https://i.imgur.com/2kAOSOt.gif"  -- GIF
+                        ["url"] = "https://i.imgur.com/FeEduJP.gif"  -- GIF
                     },
                     ["type"] = "rich",
                     ["color"] = 3447003,
@@ -999,10 +1059,10 @@ function CustomAlodieLegendHaki()
                     ["title"] = "LEGEND HAKI FINDER | BLOX FRUIT",
                     ["description"] = "Alodie Webhook Server !!",
                     ["thumbnail"] = {
-                        ["url"] = "https://i.imgur.com/kbJjgOe.png",
+                        ["url"] = "https://i.imgur.com/OUXHd55.png",
                     },
                     ["image"] = {
-                        ["url"] = "https://i.imgur.com/2kAOSOt.gif"  -- GIF
+                        ["url"] = "https://i.imgur.com/FeEduJP.gif"  -- GIF
                     },
                     ["type"] = "rich",
                     ["color"] = 3447003,
@@ -1055,10 +1115,10 @@ function CustomAlodieNormalHaki()
                     ["title"] = "NORMAL HAKI FINDER | BLOX FRUIT",
                     ["description"] = "Alodie Webhook Server !!",
                     ["thumbnail"] = {
-                        ["url"] = "https://i.imgur.com/kbJjgOe.png",
+                        ["url"] = "https://i.imgur.com/OUXHd55.png",
                     },
                     ["image"] = {
-                        ["url"] = "https://i.imgur.com/2kAOSOt.gif"  -- GIF
+                        ["url"] = "https://i.imgur.com/FeEduJP.gif"  -- GIF
                     },
                     ["type"] = "rich",
                     ["color"] = 3447003,
@@ -1111,10 +1171,10 @@ function CustomAlodieLegendSword()
                     ["title"] = "LEGEND SWORD FINDER | BLOX FRUIT",
                     ["description"] = "Alodie Webhook Server !!",
                     ["thumbnail"] = {
-                        ["url"] = "https://i.imgur.com/sM64Vat.png",
+                        ["url"] = "https://i.imgur.com/OUXHd55.png",
                     },
                     ["image"] = {
-                        ["url"] = "https://i.imgur.com/2kAOSOt.gif"  -- GIF
+                        ["url"] = "https://i.imgur.com/FeEduJP.gif"  -- GIF
                     },
                     ["type"] = "rich",
                     ["color"] = 3447003,
@@ -1167,10 +1227,10 @@ function CustomAlodieBossRaid()
                         ["title"] = "BOSS FINDER | BLOX FRUIT",
                         ["description"] = "Alodie Webhook Server !!",
                         ["thumbnail"] = {
-                            ["url"] = "https://i.imgur.com/DFvurWD.png",
+                            ["url"] = "https://i.imgur.com/OUXHd55.png",
                         },
                         ["image"] = {
-                            ["url"] = "https://i.imgur.com/2kAOSOt.gif"  -- GIF
+                            ["url"] = "https://i.imgur.com/FeEduJP.gif"  -- GIF
                         },
                         ["type"] = "rich",
                         ["color"] = 3447003,
@@ -1233,10 +1293,10 @@ function CustomAlodieRareItem()
                             ["title"] = "RARE ITEM FINDER | BLOX FRUIT",
                             ["description"] = "Alodie Webhook Server !!",
                             ["thumbnail"] = {
-                                ["url"] = "https://i.imgur.com/5luR9N3.png",
+                                ["url"] = "https://i.imgur.com/OUXHd55.png",
                             },
                             ["image"] = {
-                                ["url"] = "https://i.imgur.com/2kAOSOt.gif"  -- GIF
+                                ["url"] = "https://i.imgur.com/FeEduJP.gif"  -- GIF
                             },
                             ["type"] = "rich",
                             ["color"] = 3447003,
@@ -1292,10 +1352,10 @@ function CustomAlodieFruitFinder()
                         ["title"] = "FRUIT FINDER | BLOX FRUIT",
                         ["description"] = "Alodie Webhook Server !!",
                         ["thumbnail"] = {
-                            ["url"] = "https://i.imgur.com/lX6qhTx.png",
+                            ["url"] = "https://i.imgur.com/OUXHd55.png",
                         },
                         ["image"] = {
-                            ["url"] = "https://i.imgur.com/2kAOSOt.gif"  -- GIF
+                            ["url"] = "https://i.imgur.com/FeEduJP.gif"  -- GIF
                         },
                         ["type"] = "rich",
                         ["color"] = 3447003,
@@ -1364,6 +1424,8 @@ task.spawn(function()
             wb(links7, FruitFinder())
             wait(0.2) 
             wb(linksX6, CustomAlodieLegendSword())
+            wait(0.2)
+            wb(linksXY1, CustomAlodiePrehistoric())
             wait(0.2)
             wb(linksX7, CustomAlodieRareItem())
             wait(0.2)
