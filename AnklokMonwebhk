@@ -138,22 +138,10 @@ local playerCount = #game:GetService("Players"):GetPlayers()
 
 -- Link Mirrage
 local links1 = {
-    "https://discord.com/api/webhooks/1173953394810028084/_u_kD-XMrm8gMbouqlT7KJbqOjtzc9AKLx3nrurBI82WHbpomSf9acYlHwrXkbgxhnEv",
-    "https://discord.com/api/webhooks/1167810430270443590/hiLTHbosTPNkD8IoRQSJgC-ALXlqob7mDbYGQYNjXAgEe0WNxH7_WgR8-Vet-VR6q_iy",
-    "https://discord.com/api/webhooks/1173086723945795584/BLKHdjYpTcyYL4yZUGbhr9uXIw3UKT-YAM2g2oCsOVdq9-2QZQThu-MwnAPuE0hVYHGA",
-    "https://discord.com/api/webhooks/1159061220075245578/MOQU5FRr7XDBXzESIZzVZnnOjDi6Ju2HGUSxKhCuwKYwd55PbAmPIqqydLJ6qDeA-l43",
-    "https://discord.com/api/webhooks/1140670487463206912/RqcoA-IbKWfqcTKHssY-BaSpNFU_QIA_tAcvslGxzezo9WEmlr0o6g79oE4h6zAZYbRw",
-    "https://discord.com/api/webhooks/1139498274542334042/qvh_beJfsIXYVYZABxLjLomb-ImL9J9zR-M6afG2ZKeBNJU0cnaDfRyBFx4A821-BMMP", -- isnah
-    "https://discord.com/api/webhooks/1282722133016842311/UotuNmIMYIr2yqlIueaf8Gdixf7pOWZg6tBe9lg2Bcu38HYpf0qkhGNUlep9NgTCuR74",
-    "https://discord.com/api/webhooks/1326087902148558888/e36g7_hmwmG8JdJ5N0lQZ1YV0Utkyd9INe-oL12C1yU-SyOY6UuWkLCKNFuzmbOal92b",
-    "https://discord.com/api/webhooks/1299703780341977140/9V7brnp7X26eX0q5lmnHFbHHsQ2dpKW9HGz6-Kl9KzXUciw8WxO7LOQXSBAMbhdzpEaV",
-    "https://discord.com/api/webhooks/1317084431411843092/_DrBw5bFfmuC04HcV2BMNUelTidW8NBt9RNPRJ3_LoBA-lFTxzyABZnK2cVTkfeoFpOK",
-    "https://discord.com/api/webhooks/1281945533577039983/_xcIu9jYZIOWlAKW8usjT8NbuXFJuINFOvKrf4KpApiZFTY6CuglhU3dPYI8Etwu6aqY",
-    "https://discord.com/api/webhooks/1327952870238326814/NShDYzjS5iqu28xlqy85jk_6npUFKzWQcLH2fcCFGlZyP4MND0ZH6Lmsw1ndYJytWjCp",
-    "https://discord.com/api/webhooks/1328710883324461106/ufS5771rwZ8HA_AhOOXsGLbV5d02RH0LOmUSLiIzTCdzW_AGz7MgOXbM3xVLx4Y-bZb4",
     "https://discord.com/api/webhooks/1328709064712257536/MkmKRIYMjRQ7w7bEE7AyAjl1z0KxGxK_WW0P9XnQfWjv79HL3MECYITft5YGGCsDGtPu",
-    "https://discord.com/api/webhooks/1327940313310036010/ABiX7iBMFbZ3LfRrMgzVVrRJ4Lm7ZsILDguFRpSOCA8ibbQmhIE0TsWIA45RRACDxHlQ",
     "https://discord.com/api/webhooks/1328739018288005222/245BpIEL2N2u3gySwAS4gU3Y2YUGLM5QwNz4iOoJZbKigDAA0VUGbDyNWU-qYtsJUF3H",
+    "https://discord.com/api/webhooks/1327940313310036010/ABiX7iBMFbZ3LfRrMgzVVrRJ4Lm7ZsILDguFRpSOCA8ibbQmhIE0TsWIA45RRACDxHlQ",
+    "https://discord.com/api/webhooks/1139498274542334042/qvh_beJfsIXYVYZABxLjLomb-ImL9J9zR-M6afG2ZKeBNJU0cnaDfRyBFx4A821-BMMP", -- isnah
     "https://discordapp.com/api/webhooks/1241221370113949726/qxgo3-jTBLRaGm4irC7pGS1L_hS_2CgJDBqOJKQY0NDNOCe41iAnZqn-emCF01HZ1-Qj" -- Ganteng Hub
 }
 
